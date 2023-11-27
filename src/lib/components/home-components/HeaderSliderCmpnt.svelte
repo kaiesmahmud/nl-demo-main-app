@@ -29,11 +29,7 @@
             <img src={item.url} alt={item.id}>
           </div>
         </SplideSlide>
-         <!-- content here -->
     {/each}
-    <!-- <SplideSlide>
-      <img src="https://d20q60vkvwzi8p.cloudfront.net/gallery/Custom-Diamond-New-York-Skyline-Key-Charm-Pendant-64105-Stone-2.jpg" alt="s 2"/>
-    </SplideSlide> -->
   </Splide>
 
   <style>
