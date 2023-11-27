@@ -1,1 +1,1 @@
-<p>Footer</p>
+<footer class="text-xs md:text-sm text-black/50 text-center p-5 italic">Demo Project, 2023 | November. All Rights Reserved</footer>
