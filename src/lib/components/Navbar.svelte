@@ -67,7 +67,7 @@
     </div>
 </div>
 {#if showNav}
-     <div class=" md:hidden min-h-screen fixed top-0 w-screen bg-slate-900 text-white transition-all ease-in flex flex-col justify-between z-[1000]">
+     <div class=" md:hidden min-h-screen fixed top-0 w-screen bg-slate-900 text-white transition-all ease-in flex flex-col  z-[1000]">
         <div class="w-full  flex justify-between p-5">
             <a on:click={handleNav} href="/" class="flex items-center gap-2">
                 <div class="w-10">
@@ -79,12 +79,12 @@
                 <Icon icon="radix-icons:cross-1" />
             </button>
         </div>
-        <div class="flex flex-col mb-10">
+        <div class="flex flex-col my-10">
             {#each navItems as item(item.name)}
             <a href={item.url} class={navItemStyle} on:click={handleNav}>{item.name}</a>
             {/each}
         </div>
-        <div class="my-10 mb-20 flex items-center justify-around">
+        <div class=" mt-20 flex items-center justify-around">
             {#each myLinks as item(item.name)}
              <a href={item.url} class={myLinksStyle} on:click={handleNav}>
                  <div class="text-xl md:text-3xl">
