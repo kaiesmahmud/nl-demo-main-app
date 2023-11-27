@@ -19,8 +19,8 @@
     type : 'loop',
     autoplay: true,
     perPage : 2,
-    interval: 1000,
-    arrows: false
+    interval: 3000,
+    // arrows: false
   }
 </script>
 <Splide  options={options}
