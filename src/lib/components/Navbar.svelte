@@ -84,7 +84,7 @@
             <a href={item.url} class={navItemStyle} on:click={handleNav}>{item.name}</a>
             {/each}
         </div>
-        <div class="my-10 flex items-center justify-around">
+        <div class="my-10 mb-20 flex items-center justify-around">
             {#each myLinks as item(item.name)}
              <a href={item.url} class={myLinksStyle} on:click={handleNav}>
                  <div class="text-xl md:text-3xl">
