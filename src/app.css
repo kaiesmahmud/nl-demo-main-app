@@ -16,3 +16,6 @@ body{
     background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
     min-height: 100vh;
 }
+.splide {
+    padding: 0 !important;
+}
