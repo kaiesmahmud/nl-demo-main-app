@@ -17,6 +17,7 @@
     // perPage : 2,
     interval: 3000,
     arrows: false,
+    pagination: false,
     // width: '100%',
   }
 </script>

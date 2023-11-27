@@ -50,6 +50,11 @@ export let HomePageData = {
             productimg : "https://d186vdbjetg11u.cloudfront.net/static/media/Young_MA_pendant.54c5a4fd3d8d2d159c56.webp",
             productLink: ""
         },
+    ],
+    browseMenCollection: [
+        {
+            
+        }
     ]
 
 }
