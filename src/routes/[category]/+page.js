@@ -1,4 +1,4 @@
-import { error } from '@sveltejs/kit';
+import {  redirect } from '@sveltejs/kit';
 import { categoryDetails } from '$lib/store/store.js';
 
 export const load =async ({params})=> {
@@ -23,6 +23,8 @@ export const load =async ({params})=> {
     }
     else{
         categoryDetails.set(null)
-        throw error(404, 'Not found');
+        throw redirect(304,"/")
+        // goto("/")
+        // throw error(404, 'Not found');
     }
 }
