@@ -18,7 +18,7 @@ export const load =async ({params})=> {
     }
     else if(params.category === "special-offer"){
         console.log("women-collection is found")
-        categoryDetails.set("custom-jewelry") 
+        categoryDetails.set("special-offer") 
         
     }
     else{
