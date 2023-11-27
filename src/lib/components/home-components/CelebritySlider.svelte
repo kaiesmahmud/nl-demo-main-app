@@ -12,27 +12,43 @@
     import '@splidejs/svelte-splide/css/core';
 
     let options={
-    type : 'loop',
-    autoplay: true,
-    // perPage : 2,
-    interval: 3000,
-    arrows: false,
-    // width: '100%',
+        type   : 'loop',
+        drag   : 'free',
+        snap   : true,
+        // perPage: 3,
+        arrows: false,
+        pagination: false,
+        autoWidth: true
+        // paginationKeyboard: false
+        // breakpoints: {
+		// 640: {
+		// 	perPage: 2,
+		//     },
+		// 4040: {
+		// 	perPage: 4,
+		//     },
+        // }
+
   }
 </script>
+<h1 class="text-2xl md:text-4xl uppercase text-center">Celebrity Jewelry</h1>
 <Splide  options={options}
   aria-label="My Favorite Images" class="w-full cursor-pointer">
-    {#each  HomePageData.headerSliders as item(item.id)}
-        <SplideSlide >
-          <div class=" rounded shadow-xl">
-            <img src={item.url} alt={item.id}>
+    {#each  HomePageData.celebritySliders as item(item.name)}
+        <SplideSlide  class="w-[50%] md:w-[20%] ">
+          <div class=" overflow-visiblerounded shadow bg-black/10 m-3 md:m-5 p-3 md:p-5 rounded">
+            <!-- <div class=""> -->
+                <p class="font-light text-xl uppercase py-2">{item.name}</p>
+            <!-- </div> -->
+            <div class="relative w-full">
+                <div class=" object-center aspect-square overflow-hidden">
+                    <img src={item.img} alt={item.name} class="rounded ">
+                </div>
+                <img src={item.productimg} alt={item.name} class=" w-16 md:w-24 rounded-full absolute bottom-0 left-0 md:translate-x-[100%] translate-x-[160%] translate-y-[30%] z-10">
+            </div>
           </div>
         </SplideSlide>
-         <!-- content here -->
     {/each}
-    <!-- <SplideSlide>
-      <img src="https://d20q60vkvwzi8p.cloudfront.net/gallery/Custom-Diamond-New-York-Skyline-Key-Charm-Pendant-64105-Stone-2.jpg" alt="s 2"/>
-    </SplideSlide> -->
   </Splide>
 
   <style>
