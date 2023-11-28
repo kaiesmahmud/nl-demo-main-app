@@ -24,14 +24,13 @@
         autoWidth: true,
         pauseOnHover: true,
         // paginationKeyboard: false
-        // breakpoints: {
-		// 640: {
-		// 	perPage: 2,
-		//     },
-		// 4040: {
-		// 	perPage: 4,
-		//     },
-        // }
+        breakpoints: {
+          640: {
+            autoplay: false              },
+        // 4040: {
+        // 	perPage: 4,
+        //     },
+        }
 
   }
 </script>
