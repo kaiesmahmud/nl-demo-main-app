@@ -1,67 +1,27 @@
 <script>
     import HeaderSliderCmpnt from '../lib/components/home-components/HeaderSliderCmpnt.svelte';
     import CelebritySlider from '../lib/components/home-components/CelebritySlider.svelte';
+    import ServiceSection from '../lib/components/home-components/ServiceSection.svelte';
+    import CollectionSlider from '../lib/components/home-components/CollectionSlider.svelte';
+    import { menCollectionData, womenCollectionData } from '../lib/store/dummydata';
 
-    let links = [
-        {
-            name: "Men's Collection",
-            url:"men-collection"
-        },
-        {
-            name: "Women's Collection",
-            url:"women-collection"
-        },
-        {
-            name: "Custom Jewelry",
-            url:"custom-jewelry"
-        },
-        {
-            name: "Special Offer",
-            url:"special-offer"
-        },
-    ]
-    let prdcts = [
-        'Gold',
-        'Diamond',
-        'Gemstone',
-        'Silver',
-        'Miami Cuban',
-        'Tennis',
-        'Rope',
-        'Custom Chain Builder',
-        'Chains Catalog',
-        'Multicolor Diamond & Gem',
-        'Gold Investment Jewelry',
-        'Miami Cuban Pieces',
-        'Chain & Pendant Sets',
-        'Black Diamonds',
-        'Earrings',
-        'Bracelets',
-        'Necklaces',
-        'Rings',
-
-    ]
+    
 </script>
 <HeaderSliderCmpnt/>
-<div class="relative p-2">
-    <div class=" absolute w-[100%] h-[100%] top-0 left-0 bg-black/20 flex items-center justify-center">
-        <div class="   flex items-center justify-center gap-2 md:gap-5 flex-wrap md:flex-nowrap">
-            {#each links as item}
-                 <a href={item.url} class=" flex flex-col items-center justify-center ">
-                    <div class="bg-slate-700 text-white p-2 py-3 md:p-5 rounded font-bold">
-                        {item.name}
-                    </div>
-                 </a>
-            {/each}
-        </div>
-    </div>
-    <div class="text-sm  md:text-5xl font-bold text-black/20 flex flex-wrap items-center gap-5 text-justify justify-evenly">
-        {#each prdcts as item,i}
-             <h6 class={`${i%2 == 0 &&"text-yellow-900/10"}`}>{item}</h6>
-        {/each}
-    </div>
-
-</div>
+<ServiceSection/>
 <div class="mt-10">
     <CelebritySlider/>
+</div>
+<CollectionSlider intervalTime={2000} subCategory={menCollectionData.subCategory} products={menCollectionData.products} name={menCollectionData.title} titleCss={menCollectionData.titleCss}/>
+<CollectionSlider intervalTime={2500} subCategory={womenCollectionData.subCategory} products={womenCollectionData.products} name={womenCollectionData.title} titleCss={womenCollectionData.titleCss}/>
+<!-- <CollectionSlider intervalTime={3000} subCategory={menCollectionData.subCategory} products={menCollectionData.products} name={menCollectionData.title}/> -->
+<div class="bg-black text-white flex flex-col md:flex-row items-center justify-around ">
+    <div class="w-full md:w-1/2 aspect-square overflow-hidden flex items-center justify-center">
+        <img class="w-1/2" src="https://d186vdbjetg11u.cloudfront.net/static/media/lionMobile.21426256cdacc4be4e11.webp" alt="">
+    </div>
+    <div class="w-full md:w-1/2 flex items-center gap-3 flex-col uppercase p-5 text-center">
+        <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">our merchandise is</h1>
+        <h1 class="text-3xl md:text-5xl font-bold">100% guaranteed</h1>
+        <h1 class="font-bold">As described or full money back</h1>
+    </div>
 </div>
