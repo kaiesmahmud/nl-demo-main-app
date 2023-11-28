@@ -9,9 +9,7 @@
 </script>
 <HeaderSliderCmpnt/>
 <ServiceSection/>
-<div class="mt-10">
-    <CelebritySlider/>
-</div>
+<CelebritySlider/>
 <CollectionSlider 
     intervalTime={2000} 
     subCategory={menCollectionData.subCategory} 

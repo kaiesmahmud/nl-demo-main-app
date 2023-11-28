@@ -31,26 +31,25 @@
 
   }
 </script>
-<h1 class="text-2xl md:text-4xl uppercase text-center">Celebrity Jewelry</h1>
-<Splide  options={options}
-  aria-label="My Favorite Images" class="w-full cursor-pointer">
-    {#each  HomePageData.celebritySliders as item(item.name)}
-        <SplideSlide  class="w-[50%] md:w-[40%] lg:w-[20%] flex items-center justify-center">
-          <div class=" overflow-visiblerounded shadow bg-black/10 m-3 md:m-5 p-3 md:p-5 rounded">
-            <!-- <div class=""> -->
-                <p class="font-light md:text-xl uppercase py-2">{item.name}</p>
-            <!-- </div> -->
-            <div class="relative w-full">
-                <div class=" object-center aspect-square overflow-hidden rounded">
-                    <img src={item.img} alt={item.name} class="rounded hover:scale-110 transition-all ease-in">
-                </div>
-                <img src={item.productimg} alt={item.name} class=" w-16 md:w-24 rounded-full absolute bottom-0 left-0 md:translate-x-[100%] translate-x-[50%] translate-y-[30%] z-10 border-4 border-black/30 hover:scale-110 transition-all ease-in">
+<div class="bg-white py-10">
+
+  <h1 class="text-2xl md:text-4xl uppercase text-center">Celebrity Jewelry</h1>
+  <Splide  options={options}
+    aria-label="My Favorite Images" class="w-full cursor-pointer">
+      {#each  HomePageData.celebritySliders as item(item.name)}
+          <SplideSlide  class="w-[50%] md:w-[40%] lg:w-[20%] flex items-center justify-center">
+            <div class=" overflow-visiblerounded shadow bg-black/10 m-3 md:m-5 p-3 md:p-5 rounded">
+              <!-- <div class=""> -->
+                  <p class="font-light md:text-xl uppercase py-2">{item.name}</p>
+              <!-- </div> -->
+              <div class="relative w-full">
+                  <div class=" object-center aspect-square overflow-hidden rounded">
+                      <img src={item.img} alt={item.name} class="rounded hover:scale-110 transition-all ease-in">
+                  </div>
+                  <img src={item.productimg} alt={item.name} class="w-16 md:w-1/3  rounded-full absolute bottom-0 left-0 md:translate-x-[100%] translate-x-[50%] translate-y-[30%] z-10 border-4 border-black/30 hover:scale-110 transition-all ease-in">
+              </div>
             </div>
-          </div>
-        </SplideSlide>
-    {/each}
-  </Splide>
-
-  <style>
-
-  </style>
+          </SplideSlide>
+      {/each}
+    </Splide>
+</div>
