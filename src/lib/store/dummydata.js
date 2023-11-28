@@ -60,14 +60,380 @@ export let HomePageData = {
 }
 
 export let menCollectionData = {
-    
+    title:"shop Popular Men's Deal",
+    titleCss: "text-transparent capitalize bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600",
+    products: [
+        {
+            name:"TraxNYC Silver and Gold Skull Mask Pendant 68843",
+            url: "men-collection/silver-gold-skull-mask-pendant-68843",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/TraxNYC-Silver-and-Gold-Skull-Mask-Pendant-68843-Style-1.jpg",
+            price:"5950",
+            type:"14K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"10K Gold Diamond Pendant 63618",
+            url: "men-collection/gold-diamond-pendant-63618",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/10K-Yellow-Gold-Micro-Pave-Diamond-Hamsa-Hand-Charm-Pendant-63618-Metal-1.jpg",
+            price:"610",
+            type:"10K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"Diamond Lion Pendant 65810",
+            url: "men-collection/diamond-lion-pendant-65810",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/TraxNYC--Diamond-Lion-Pendant-65810-Metal-1.jpg",
+            price:"550",
+            type:"10K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"10K Gold Micro Pave Diamond Egyptian Bedouin Evil Eye Charm Pendant Set 66620",
+            url: "men-collection/egyptian-bedouin-pendant-set-66620",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/10K-Gold--Micro-Pave-Diamond-Egyptian-Bedouin-Evil-Eye-Charm-Pendant-Set-66620-Metal-1.jpg",
+            price:"865",
+            type:"10K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"14K Gold Cuban Link Diamond Cross 66168",
+            url: "men-collection/gold-cuban-link-diamond-cross-66168",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/14K-Yellow-Gold-Cuban-Link-Diamond-Cross-66168-Diamond-1.jpg",
+            price:"2155",
+            type:"14K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+    ],
+    subCategory: [
+        "Chains", "pendants", "Rings", "Earrings", "Bracelets", "Watches", "Collections", "Special Deals"
+    ]
 }
 export let womenCollectionData = {
+    title:"shop Popular Women's Deal",
+    titleCss: "text-transparent capitalize bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400",
 
+    subCategory: [
+        "Chains", "pendants", "Rings", "Earrings", "Bracelets", "Watches", "Collections", "Special Deals"
+    ],
+    products: [
+        {
+            name:"TraxNYC Silver and Gold Skull Mask Pendant 68843",
+            url: "men-collection/silver-gold-skull-mask-pendant-68843",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/TraxNYC-Silver-and-Gold-Skull-Mask-Pendant-68843-Style-1.jpg",
+            price:"5950",
+            type:"14K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"10K Gold Diamond Pendant 63618",
+            url: "men-collection/gold-diamond-pendant-63618",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/10K-Yellow-Gold-Micro-Pave-Diamond-Hamsa-Hand-Charm-Pendant-63618-Metal-1.jpg",
+            price:"610",
+            type:"10K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"Diamond Lion Pendant 65810",
+            url: "men-collection/diamond-lion-pendant-65810",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/TraxNYC--Diamond-Lion-Pendant-65810-Metal-1.jpg",
+            price:"550",
+            type:"10K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"10K Gold Micro Pave Diamond Egyptian Bedouin Evil Eye Charm Pendant Set 66620",
+            url: "men-collection/egyptian-bedouin-pendant-set-66620",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/10K-Gold--Micro-Pave-Diamond-Egyptian-Bedouin-Evil-Eye-Charm-Pendant-Set-66620-Metal-1.jpg",
+            price:"865",
+            type:"10K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+        {
+            name:"14K Gold Cuban Link Diamond Cross 66168",
+            url: "men-collection/gold-cuban-link-diamond-cross-66168",
+            img: "https://d20q60vkvwzi8p.cloudfront.net/gallery/14K-Yellow-Gold-Cuban-Link-Diamond-Cross-66168-Diamond-1.jpg",
+            price:"2155",
+            type:"14K Yellow GOLD",
+            allImgs : [],
+            specs : [
+                {
+                name: "Diamond Origin",
+                value: "natural"
+                },
+                {
+                name: "Cut",
+                value: "round"
+                },
+                {
+                name: "Diamond Weight",
+                value: "0.28ct"
+                },
+                {
+                name: "Diamond Color",
+                value: "G"
+                },
+                {
+                name: "Diamond Clarity",
+                value: "SI1"
+                },
+                {
+                name: "Setting",
+                value: "Prong"
+                },
+            ]
+
+        },
+    ],
+    
 }
 export let customCollectionData = {
-
+    title:"Cusomize Collection",
+    
 }
 export let specialOfferData = {
+    title:"save on Deal's",
 
 }
