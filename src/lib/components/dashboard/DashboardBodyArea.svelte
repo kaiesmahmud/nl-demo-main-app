@@ -1,5 +1,8 @@
 <script>
     import { showDashboardBodyTopic } from "../../store/store";
+    import EditAddressView from "./EditAddressView.svelte";
+    import MyAccountEditView from "./MyAccountEditView.svelte";
+    import MyOrderView from "./MyOrderView.svelte";
 
     let showArea = [
         "my-order",
@@ -12,19 +15,18 @@
 </script>
 <div class="w-full md:w-2/3 bg-black/10 rounded p-2 md:p-5">
     {#if $showDashboardBodyTopic === "my-order"}
-         <h1 class="text-2xl md:text-3xl font-bold">My Order</h1>
-         <h2 class="text-lg md:text-xl font-semibold">Recent Orders</h2>
+    <MyOrderView/>
     {/if}
     {#if $showDashboardBodyTopic === "my-account"}
-         <h1 class="text-xl font-bold capitalize">my-account</h1>
+    <MyAccountEditView/>
     {/if}
     {#if $showDashboardBodyTopic === "edit-address"}
-         <h1 class="text-xl font-bold capitalize">edit-address</h1>
+    <EditAddressView/>
     {/if}
     {#if $showDashboardBodyTopic === "my-wishlists"}
-         <h1 class="text-xl font-bold capitalize">my-wishlists</h1>
+         <h1 class="text-2xl md:text-3xl font-bold capitalize">my-wishlists</h1>
     {/if}
     {#if $showDashboardBodyTopic === "compare-items"}
-         <h1 class="text-xl font-bold capitalize">compare-items</h1>
+         <h1 class="text-2xl md:text-3xl font-bold capitalize">compare-items</h1>
     {/if}
 </div>
