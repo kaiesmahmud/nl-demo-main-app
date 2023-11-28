@@ -38,9 +38,11 @@
         showBar = !showBar
     }
     const handleChangeDasBody = (arg) => {
-        showDashboardBodyTopic.set(arg)
+        if($showDashboardBodyTopic !== arg){
+            showDashboardBodyTopic.set(arg)
+            console.log(arg)
+        }
         showBar =false
-        console.log(arg)
     }
 </script>
     <div class="w-full md:w-1/3 bg-black/10 rounded p-2 md:p-5">
