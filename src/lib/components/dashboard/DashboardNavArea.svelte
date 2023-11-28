@@ -45,9 +45,10 @@
 </script>
     <div class="w-full md:w-1/3 bg-black/10 rounded p-2 md:p-5">
         <div  class="flex  items-center justify-between w-full p-2">
-            <div>
+            <div class="flex flex-col gap-2 w-2/3">
                 <h1 class="font-bold text-xl md:text-2xl">Hello ! User Name</h1>
                 <p>Account Balance: <span class="text-violet-700 text-xl">$0.00</span> </p>
+                <button class="rounded bg-slate-700 px-3 py-2 font-semibold text-white">Log out</button>
             </div>
             <button on:click={handleShowBar} class="text-xl md:text-2xl md:hidden p-3 rounded-full bg-black/10">
                 <Icon icon="subway:down" />
