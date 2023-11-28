@@ -60,7 +60,7 @@
         <div class="md:hidden p-2">
             <h2 class="text-lg font-semibold my-4">Order Details</h2>
             <div class="flex flex-col gap-3 p-3">
-                <button on:click={()=>handleChangeDasBody("my-order")} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+                <button on:click={()=>handleChangeDasBody("my-order")} class={`p-3  hover:bg-white flex items-center justify-between rounded ${$showDashboardBodyTopic == "my-order" && "bg-white"}   ${($showDashboardBodyTopic !== "my-order") && "bg-white/50"}`}>
                     <div class="flex items-center gap-3">
                         <div class="text-xl md:text-2xl">
                             <Icon icon="lets-icons:order-light" />                    

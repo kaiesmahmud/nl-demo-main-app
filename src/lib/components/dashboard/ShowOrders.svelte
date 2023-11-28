@@ -11,7 +11,7 @@
     
 </script>
     <div class="flex flex-col gap-3 w-full">
-        <button on:click={handleOpen} class="w-full p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+        <button on:click={handleOpen} class={`w-full p-3  hover:bg-white flex items-center justify-between rounded ${open && 'bg-white'} ${!open && 'bg-white/50'} shadow`}>
             <div class="flex items-center gap-3">
                 <div class="text-xl md:text-2xl">
                     <Icon icon="fluent-mdl2:activate-orders" />

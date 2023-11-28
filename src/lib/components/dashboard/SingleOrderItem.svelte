@@ -1,7 +1,7 @@
 <script>
     export let item
 </script>
-<div class="flex flex-col md:flex-row justify-between gap-1 bg-white/20 p-2 shadow-lg">
+<div class="flex flex-col md:flex-row justify-between gap-1 bg-white p-2 shadow-lg">
     <div class="flex flex-col md:flex-row gap-1">
         <div class="w-20 rounded overflow-hidden">
             <img class="w-full" src={item.img} alt="">
