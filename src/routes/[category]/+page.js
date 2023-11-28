@@ -11,11 +11,6 @@ export const load =async ({params})=> {
         categoryDetails.set("women-collection")
         
     }
-    else if(params.category === "custom-jewelry"){
-        console.log("women-collection is found")
-        categoryDetails.set("custom-jewelry")
-        
-    }
     else if(params.category === "special-offer"){
         console.log("women-collection is found")
         categoryDetails.set("special-offer") 
@@ -24,7 +19,5 @@ export const load =async ({params})=> {
     else{
         categoryDetails.set(null)
         throw redirect(304,"/")
-        // goto("/")
-        // throw error(404, 'Not found');
     }
 }
