@@ -9,7 +9,7 @@
 </script>
 <HeaderSliderCmpnt/>
 <ServiceSection/>
-<CelebritySlider/>
+<!-- <CelebritySlider/> -->
 <CollectionSlider 
     intervalTime={2000} 
     subCategory={menCollectionData.subCategory} 

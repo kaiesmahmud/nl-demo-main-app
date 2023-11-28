@@ -18,7 +18,7 @@
     
 </script>
 
-<section class="w-full md:w-2/3 bg-black/20 rounded shadow-lg p-3 md:p-5">
+<section class="w-full md:w-2/3 bg-black/20 rounded shadow-lg p-3 md:p-5 text-slate-800">
     {#if $showAdminNavItem === "analytics"}
         <AdminAnalytics/>
     {/if}
