@@ -7,7 +7,7 @@
             <img class="w-full" src={item.img} alt="">
         </div>
         <div class="flex flex-col justify-center pl-3">
-            <p class="font-semibold">{item.name}</p>
+            <p class="font-semibold text-lg">{item.name}</p>
             <div class="flex items-center gap-5">
                 <p class="font-bold text-purple-500">${item.price}</p>
                 <p class="text-xs">{item.type}</p>
