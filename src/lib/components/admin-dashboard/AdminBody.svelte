@@ -5,9 +5,11 @@
     import AdminAllProducts from './AdminAllProducts.svelte';
     import AdminAllUsers from './AdminAllUsers.svelte';
     import AdminAllOrders from './AdminAllOrders.svelte';
+    import AdminSEO from './AdminSEO.svelte';
 
     let showItemsName = [
         "analytics",
+        "seo",
         "all-category",
         "all-products",
         "all-users",
@@ -19,6 +21,9 @@
 <section class="w-full md:w-2/3 bg-black/20 rounded shadow-lg p-3 md:p-5">
     {#if $showAdminNavItem === "analytics"}
         <AdminAnalytics/>
+    {/if}
+    {#if $showAdminNavItem === "seo"}
+        <AdminSEO/>
     {/if}
     {#if $showAdminNavItem === "all-category"}
         <AdminAllCategory/>

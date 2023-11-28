@@ -8,6 +8,11 @@
             value:"analytics"
         },
         {
+            name:"Search Engine Optimization",
+            icon: "arcticons:auditor"  ,
+            value:"seo"
+        },
+        {
             name:"All-Category",
             icon: "material-symbols-light:category-outline" ,
             value:"all-category"
