@@ -51,11 +51,7 @@ export let HomePageData = {
             productLink: ""
         },
     ],
-    browseMenCollection: [
-        {
-            
-        }
-    ]
+    
 
 }
 
@@ -430,10 +426,7 @@ export let womenCollectionData = {
     ],
     
 }
-export let customCollectionData = {
-    title:"Cusomize Collection",
-    
-}
+
 export let specialOfferData = {
     title:"save on Deal's",
 
