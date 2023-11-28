@@ -62,6 +62,7 @@ export let HomePageData = {
 export let menCollectionData = {
     title:"shop Popular Men's Deal",
     titleCss: "text-transparent capitalize bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600",
+    productCardTypeCss: "bg-gradient-to-r from-cyan-600 to-teal-500",
     products: [
         {
             name:"TraxNYC Silver and Gold Skull Mask Pendant 68843",
@@ -246,7 +247,7 @@ export let menCollectionData = {
 export let womenCollectionData = {
     title:"shop Popular Women's Deal",
     titleCss: "text-transparent capitalize bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400",
-
+    productCardTypeCss: "bg-gradient-to-r from-purple-500 to-pink-500",
     subCategory: [
         "Chains", "pendants", "Rings", "Earrings", "Bracelets", "Watches", "Collections", "Special Deals"
     ],

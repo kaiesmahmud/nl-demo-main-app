@@ -10,7 +10,8 @@
 
     // or only core styles
     import '@splidejs/svelte-splide/css/core';
-    export let intervalTime , products , name ,subCategory ,titleCss
+    export let intervalTime , products , name ,subCategory ,titleCss ,productCardTypeCss
+
     let options={
         type   : 'loop',
         drag   : 'free',
@@ -47,9 +48,7 @@
     {#each  products as item}
         <SplideSlide  class="w-[55%] md:w-[40%] lg:w-[20%] flex items-center justify-center m-1">
           <a href={item.url} class=" overflow-visiblerounded shadow-lg bg-white m-3 md:m-5 py-3 md:py-5 rounded">
-            <!-- <div class=""> -->
-                <p class="font-light text-sm md:text-xl uppercase py-2 px-3 bg-orange-500">{item.type}</p>
-            <!-- </div> -->
+            <p class={`font-light text-sm md:text-xl uppercase py-2 px-3 ${productCardTypeCss}`}>{item.type}</p>
             <div class="relative w-full">
                 <div class=" object-center aspect-square overflow-hidden rounded flex items-center justify-center bg-white">
                     <img src={item.img} alt={item.name} class="rounded hover:scale-110 transition-all ease-in">
