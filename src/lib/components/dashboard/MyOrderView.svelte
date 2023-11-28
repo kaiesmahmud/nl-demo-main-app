@@ -9,7 +9,7 @@
         },
         {
             name: "View Pending Orders",
-            value:"view-all-orders",
+            value:"view-pending-orders",
         },
         
     ]
