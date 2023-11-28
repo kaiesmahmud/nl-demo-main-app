@@ -12,7 +12,8 @@
 </script>
 <div class="w-full md:w-2/3 bg-black/10 rounded p-2 md:p-5">
     {#if $showDashboardBodyTopic === "my-order"}
-         <h1 class="text-xl font-bold">My Order</h1>
+         <h1 class="text-2xl md:text-3xl font-bold">My Order</h1>
+         <h2 class="text-lg md:text-xl font-semibold">Recent Orders</h2>
     {/if}
     {#if $showDashboardBodyTopic === "my-account"}
          <h1 class="text-xl font-bold capitalize">my-account</h1>
