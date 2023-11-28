@@ -1,1 +1,1 @@
-<footer class="text-xs md:text-sm text-black/50 text-center p-5 italic">Demo Project, 2023 | November. All Rights Reserved</footer>
+<footer class="text-xs md:text-sm text-black/50 text-center p-5 italic">Demo Project, 2023 | November. All Rights Reserved | <a href="/admin" class="font-bold hover:text-black p-3 hover:border hover:shadow">Admin Panel</a></footer>
