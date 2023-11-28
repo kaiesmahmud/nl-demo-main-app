@@ -10,7 +10,7 @@
             <p class="font-semibold">{item.name}</p>
             <div class="flex items-center gap-5">
                 <p class="font-bold text-purple-500">${item.price}</p>
-                <p>{item.type}</p>
+                <p class="text-xs">{item.type}</p>
             </div>
         </div>
     </div>
