@@ -33,62 +33,127 @@
         "my-wishlists",
         "compare-items",
     ];
+    let showBar = true
+    const handleShowBar = () => {
+        showBar = !showBar
+    }
     const handleChangeDasBody = (arg) => {
         showDashboardBodyTopic.set(arg)
+        showBar =false
         console.log(arg)
     }
 </script>
     <div class="w-full md:w-1/3 bg-black/10 rounded p-2 md:p-5">
-        <h1 class="font-bold text-xl md:text-2xl">Hello ! User Name</h1>
-        <p>Account Balance: <span class="text-violet-700 text-xl">$0.00</span> </p>
-        <h2 class="text-lg font-semibold my-4">Order Details</h2>
-        <p>Order Information</p>
-        <div class="flex flex-col gap-3 p-3">
-            <button on:click={()=>handleChangeDasBody("my-order")} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
-                <div class="flex items-center gap-3">
-                    <div class="text-xl md:text-2xl">
-                        <Icon icon="lets-icons:order-light" />                    
-                    </div>
-                    <p class="font-light">My Order</p>
-                </div>
-                <div>
-                    <Icon icon="ep:right" />
-                </div>
+        <div  class="flex  items-center justify-between w-full p-2">
+            <div>
+                <h1 class="font-bold text-xl md:text-2xl">Hello ! User Name</h1>
+                <p>Account Balance: <span class="text-violet-700 text-xl">$0.00</span> </p>
+            </div>
+            <button on:click={handleShowBar} class="text-xl md:text-2xl md:hidden p-3 rounded-full bg-black/10">
+                <Icon icon="subway:down" />
             </button>
         </div>
-        <h2 class="text-lg font-semibold my-3">My Account</h2>
-
-        <p>Personal Information</p>
-        <div class="flex flex-col gap-3 p-3" >
-            {#each personalInfo as i}
-                <button on:click={()=>handleChangeDasBody(i.show)} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+        {#if showBar}
+        <div class="md:hidden p-2">
+            <h2 class="text-lg font-semibold my-4">Order Details</h2>
+            <div class="flex flex-col gap-3 p-3">
+                <button on:click={()=>handleChangeDasBody("my-order")} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
                     <div class="flex items-center gap-3">
                         <div class="text-xl md:text-2xl">
-                            <Icon icon={i.icon} />
+                            <Icon icon="lets-icons:order-light" />                    
                         </div>
-                        <p class="font-light">{i.name}</p>
+                        <p class="font-light">My Order</p>
                     </div>
                     <div>
                         <Icon icon="ep:right" />
                     </div>
                 </button>
-            {/each}
+            </div>
+            <h2 class="text-lg font-semibold my-3">My Account</h2>
+    
+            <p>Personal Information</p>
+            <div class="flex flex-col gap-3 p-3" >
+                {#each personalInfo as i}
+                    <button on:click={()=>handleChangeDasBody(i.show)} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+                        <div class="flex items-center gap-3">
+                            <div class="text-xl md:text-2xl">
+                                <Icon icon={i.icon} />
+                            </div>
+                            <p class="font-light">{i.name}</p>
+                        </div>
+                        <div>
+                            <Icon icon="ep:right" />
+                        </div>
+                    </button>
+                {/each}
+            </div>
+            <p>Other Information</p>
+            <div class="flex flex-col gap-3 p-3" >
+                {#each myItems as i}
+                    <button on:click={()=>handleChangeDasBody(i.show)} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+                        <div class="flex items-center gap-3">
+                            <div class="text-xl md:text-2xl">
+                                <Icon icon={i.icon} />
+                            </div>
+                            <p class="font-light">{i.name}</p>
+                        </div>
+                        <div>
+                            <Icon icon="ep:right" />
+                        </div>
+                    </button>
+                {/each}
+            </div>
         </div>
-        <p>Other Information</p>
-        <div class="flex flex-col gap-3 p-3" >
-            {#each myItems as i}
-                <button on:click={()=>handleChangeDasBody(i.show)} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+        {/if}
+        <div class="hidden md:block">
+            <h2 class="text-lg font-semibold my-4">Order Details</h2>
+            <div class="flex flex-col gap-3 p-3">
+                <button on:click={()=>handleChangeDasBody("my-order")} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
                     <div class="flex items-center gap-3">
                         <div class="text-xl md:text-2xl">
-                            <Icon icon={i.icon} />
+                            <Icon icon="lets-icons:order-light" />                    
                         </div>
-                        <p class="font-light">{i.name}</p>
+                        <p class="font-light">My Order</p>
                     </div>
                     <div>
                         <Icon icon="ep:right" />
                     </div>
                 </button>
-            {/each}
+            </div>
+            <h2 class="text-lg font-semibold my-3">My Account</h2>
+    
+            <p>Personal Information</p>
+            <div class="flex flex-col gap-3 p-3" >
+                {#each personalInfo as i}
+                    <button on:click={()=>handleChangeDasBody(i.show)} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+                        <div class="flex items-center gap-3">
+                            <div class="text-xl md:text-2xl">
+                                <Icon icon={i.icon} />
+                            </div>
+                            <p class="font-light">{i.name}</p>
+                        </div>
+                        <div>
+                            <Icon icon="ep:right" />
+                        </div>
+                    </button>
+                {/each}
+            </div>
+            <p>Other Information</p>
+            <div class="flex flex-col gap-3 p-3" >
+                {#each myItems as i}
+                    <button on:click={()=>handleChangeDasBody(i.show)} class="p-3 bg-white/50 hover:bg-white flex items-center justify-between rounded">
+                        <div class="flex items-center gap-3">
+                            <div class="text-xl md:text-2xl">
+                                <Icon icon={i.icon} />
+                            </div>
+                            <p class="font-light">{i.name}</p>
+                        </div>
+                        <div>
+                            <Icon icon="ep:right" />
+                        </div>
+                    </button>
+                {/each}
+            </div>
         </div>
     </div>
 
