@@ -35,7 +35,7 @@
 <Splide  options={options}
   aria-label="My Favorite Images" class="w-full cursor-pointer">
     {#each  HomePageData.celebritySliders as item(item.name)}
-        <SplideSlide  class="w-[50%] md:w-[20%] flex items-center justify-center">
+        <SplideSlide  class="w-[50%] md:w-[40%] lg:w-[20%] flex items-center justify-center">
           <div class=" overflow-visiblerounded shadow bg-black/10 m-3 md:m-5 p-3 md:p-5 rounded">
             <!-- <div class=""> -->
                 <p class="font-light md:text-xl uppercase py-2">{item.name}</p>
