@@ -7,8 +7,8 @@
 
     
 </script>
-<HeaderSliderCmpnt/>
-<ServiceSection/>
+<!-- <HeaderSliderCmpnt/> -->
+<!-- <ServiceSection/> -->
 <!-- <CelebritySlider/> -->
 <CollectionSlider 
     intervalTime={2000} 
