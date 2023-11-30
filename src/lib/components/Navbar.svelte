@@ -45,7 +45,7 @@
 <div class="bg-white text-xs relative">
     <div class="flex items-center justify-between px-3 md:px-5 md:py-2 ">
         <div class="flex items-center gap-3">
-            <div class="text-sm">
+            <div class="text-sm text-red-500">
                 <Icon icon="carbon:location" />
             </div>
             21ST, City name here
@@ -59,24 +59,15 @@
                     <Icon icon="teenyicons:down-outline" />
                 </div>
             </div>
-            <!-- <div class="flex items-center gap-3">
-                USA
-                <div class="text-sm">
-                    <Icon icon="teenyicons:down-outline" />
-                </div>
-            </div> -->
-            <div class="flex gap-1 ">
+            <button class="flex gap-1 bg-red-100 hover:bg-red-600 hover:text-white rounded shadow px-3 py-2 transition-all ease-in ">
                 <div >
-                    Sign in /
+                    Sign in
                 </div>
-                <div>
-                    Sign up
-                </div>
-            </div>
+            </button>
         </div>
 
     </div>
-    <div class=" p-2 md:p-4 flex items-center justify-between md:px-10">
+    <div class=" p-2 md:p-4 flex items-center justify-between md:px-10 border-t-2 border-red-100">
         <a href="/" class="flex items-center gap-1 md:gap-5">
             <div class="w-10">
                 <img src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="TRAXNYC">
@@ -117,10 +108,10 @@
         </div>
         
     </div>
-    <div class="bg-black text-white flex items-center justify-between  md:px-10">
+    <div class=" flex items-center justify-between  md:px-10 border-t-2 border-red-500">
         <div class=" hidden md:flex items-center gap-1">
             {#each navItems as item(item.name)}
-            <a href={item.url} class={` border-y-4 border-black hover:border-blue-500 hover:text-blue-300 ${navItemStyle}`}>{item.name}</a>
+            <a href={item.url} class={` border-b-4 border-white hover:border-red-500 hover:text-red-600 ${navItemStyle}`}>{item.name}</a>
             {/each}
         </div>
         

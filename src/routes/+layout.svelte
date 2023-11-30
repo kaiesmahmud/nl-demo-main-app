@@ -12,7 +12,6 @@
 
 </script>
 <div class="flex items-center justify-center" >
-
     <div class="w-full lg:w-[80%]">
         <Navbar/>
         <slot/>
