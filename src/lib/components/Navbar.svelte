@@ -32,8 +32,8 @@
             url:"/cart"
         },
     ]
-    let navItemStyle = " px-5 py-3  font-semibold text-sm lg:text-lg transition-all ease-in"
-    let myLinksStyle = "flex gap-3 md:gap-0 items-center md:justify-center px-3 py-1 font-semibold transition-all ease-in  "
+    let navItemStyle = "py-1 md:py-2 px-2 md:px-3 lg:px-5 lg:py-3  font-semibold text-sm  transition-all ease-in"
+    let myLinksStyle = "flex gap-3 md:gap-0 items-center md:justify-center px-3 py-1 font-semibold transition-all ease-in rounded-full bg-slate-500/10 lg:bg-white hover:bg-slate-200 "
 
     let showNav = false ;
     const handleNav = ()=> showNav=!showNav
@@ -42,7 +42,7 @@
     }
 </script>
 
-<div class="bg-white text-xs">
+<div class="bg-white text-xs relative">
     <div class="flex items-center justify-between px-3 md:px-5 md:py-2 ">
         <div class="flex items-center gap-3">
             <div class="text-sm">
@@ -83,40 +83,39 @@
             </div>
             <h1 class=" font-light text-lg md:text-xl lg:text-3xl">TRAXNYC</h1>
         </a>
-        <div class="flex w-[25%]">
+        <div class="w-[25%] hidden lg:flex">
             <input type="text" class="bg-slate-200 w-full rounded p-2" placeholder="Search Jewelry">
             <button class="text-xl md:text-2xl lg:text-3xl bg-slate-100 rounded p-2">
                 <Icon icon="material-symbols-light:search" />
             </button>
         </div>
-        <!-- <div class=" hidden md:flex items-center gap-1">
-            {#each navItems as item(item.name)}
-            <a href={item.url} class={navItemStyle}>{item.name}</a>
-            {/each}
-        </div> -->
-        <!-- <div class="hidden md:flex items-center gap-2 md:gap-4">
-            {#each myLinks as item(item.name)}
-                 <a href={item.url} class={myLinksStyle}>
-                     <div class="text-xl md:text-3xl">
-                         <Icon icon={item.icon} />
-                     </div>
-                     <p class=" hidden lg:inline-block">{item.name}</p>
-                 </a>
-            {/each}
-        </div> -->
-        <a href="tel:123123123" class="p-5 flex items-center gap-3 font-bold">
-            <div class="text-xl md:text-2xl">
-                <Icon icon="fluent:call-20-regular" />
+        <div class="flex items-center">
+            <a href="tel:123123123" class="p-5 flex items-center gap-3 font-bold">
+                <div class="text-xl md:text-2xl">
+                    <Icon icon="fluent:call-20-regular" />
+                </div>
+                <p class="hidden lg:inline-block">123 456 7890</p>
+            </a>
+            <div class="flex items-center gap-2 md:gap-4">
+                {#each myLinks as item(item.name)}
+                     <a href={item.url} class={myLinksStyle}>
+                         <div class="text-xl md:text-3xl">
+                             <Icon icon={item.icon} />
+                         </div>
+                         <p class=" hidden lg:inline-block">{item.name}</p>
+                     </a>
+                {/each}
             </div>
-            <p>123 456 7890</p>
-        </a>
-        <div class=" md:hidden">
-            {#if !showNav}
-                <button on:click={handleNav} class="text-4xl md:hidden">
-                    <Icon icon="jam:menu" />
-                </button>            
-            {/if}
+            
+            <div class=" md:hidden">
+                {#if !showNav}
+                    <button on:click={handleNav} class="text-4xl md:hidden">
+                        <Icon icon="jam:menu" />
+                    </button>            
+                {/if}
+            </div>
         </div>
+        
     </div>
     <div class="bg-black text-white flex items-center justify-between  md:px-10">
         <div class=" hidden md:flex items-center gap-1">
@@ -124,20 +123,11 @@
             <a href={item.url} class={` border-y-4 border-black hover:border-blue-500 hover:text-blue-300 ${navItemStyle}`}>{item.name}</a>
             {/each}
         </div>
-        <div class="hidden md:flex items-center gap-2 md:gap-4">
-            {#each myLinks as item(item.name)}
-                 <a href={item.url} class={myLinksStyle}>
-                     <div class="text-xl md:text-3xl">
-                         <Icon icon={item.icon} />
-                     </div>
-                     <p class=" hidden lg:inline-block">{item.name}</p>
-                 </a>
-            {/each}
-        </div>
+        
 
     </div>
     {#if showNav}
-         <div class=" md:hidden min-h-screen fixed top-0 w-screen transition-all ease-in flex flex-col  z-[1000]">
+         <div class="bg-black text-white md:hidden min-h-screen fixed top-0 w-screen transition-all ease-in flex flex-col  z-[1000]">
             <div class="w-full  flex justify-between p-5">
                 <a on:click={handleNav} href="/" class="flex items-center gap-2">
                     <div class="w-10">

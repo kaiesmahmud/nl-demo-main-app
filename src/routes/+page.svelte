@@ -28,10 +28,10 @@
 <div class="relative">
     <img src="https://d186vdbjetg11u.cloudfront.net/static/media/holiday-deals-desktop.4ae49edb320218167a71.webp" alt="">
     <div class=" absolute top-0 w-full h-full flex items-center justify-center flex-col">
-        <div class="flex items-center justify-center flex-col bg-white/60 p-5 rounded-xl shadow">
-            <h1 class={`text-xl md:text-2xl capitalize`}>Shop Multicolor</h1>
-            <h1 class={`text-2xl md:text-4xl capitalize  m-5 font-semibold `} >Saphire Collection</h1>
-            <p class=" cursor-pointer border border-red-500 text-white font-bold px-5 py-3 rounded-[35px] text-lg bg-red-500 hover:text-red-500 hover:bg-white">Best Deal</p>
+        <div class="flex items-center justify-center flex-col bg-white/60 p-2  lg:p-5 rounded-xl shadow">
+            <h1 class={`md:text-md lg:text-2xl capitalize`}>Shop Multicolor</h1>
+            <h1 class={`text-md  lg:text-4xl capitalize  m-5 font-semibold `} >Saphire Collection</h1>
+            <p class=" cursor-pointer border border-red-500 text-white font-bold p-1 md:px-3 md:py-1 px-5 py-3 rounded-[35px] text-xs md:text-sm lg:text-lg bg-red-500 hover:text-red-500 hover:bg-white">Best Deal</p>
 
         </div>
     </div>

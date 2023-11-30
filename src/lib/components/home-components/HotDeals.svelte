@@ -40,7 +40,7 @@
         }
     ]
 </script>
-<section class="grid grid-cols-1  lg:grid-cols-3">
+<section class="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3">
     <div>
         <h1 class={`text-xl md:text-2xl capitalize  m-5 mb-0 font-semibold `}>Hot Deals</h1>
         <div class="flex p-5 flex-col gap-3">
