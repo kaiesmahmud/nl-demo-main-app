@@ -51,7 +51,7 @@
     </div>
     <div>
         <h1 class={`text-xl md:text-2xl capitalize  m-5 mb-0 font-semibold `}>Top Rated</h1>
-        <div class="flex p-5 flex-col gap-3 md:border-l-2 md:border-slate-900 mb-5">
+        <div class="flex p-5 flex-col gap-3 md:border-l-2 md:border-slate-900/50 mb-5">
             {#each hotDealsProducts as product(product.p_id)}
                 <ProductCardLandScape {product}/>
             {/each}
@@ -59,8 +59,8 @@
     </div>
     <div class="h-full overflow-hidden">
         <h1 class={`text-xl md:text-2xl capitalize  m-5 font-semibold `}>Summer Sale</h1>
-        <div class="flex p-5  gap-3 md:border-l-2 md:border-slate-900 mb-5 bg-white ">
-
+        <div class="flex p-5  gap-3  mb-5  ">
+            <img class="rounded-lg shadow-xl border border-black/10" src="https://www.juwelo.nl/amg/62c70e7fda444677dd3c7d61d9ff5a20/1200/media/banner/nl/common/mteaser/e8ca1ec4_2020-10-05_2020_sale-1060x1254-desktop-nl.webp" alt="">
         </div>
     </div>
 </section>

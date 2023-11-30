@@ -50,18 +50,38 @@
     ]
 </script>
 
-<section class=" p-5 md:py-10">
-    <h1 class={`text-2xl md:text-4xl capitalize  m-5 font-semibold `}>Popular Catagories:</h1>
-    <div class="p-1 flex items-center justify-center">
-        <div class="w-full md:w-[90%] lg:w-[80%] grid grid-cols-2 md:grid-cols-4 gap-3 ">
-            {#each popularCategories as {name,img,url}}
-            <a href={url} class="m-5 shadow-lg flex flex-col gap-3 items-center justify-between p-2 md:p-3 lg:p-5 rounded-xl border border-slate-200 hover:shadow-2xl select-none cursor-pointer bg-white">
-                <div class="rounded-full overflow-hidden w-1/2">
-                    <img src={img} alt={name} class="shadow-lg rounded-full hover:scale-110 transition-all ease-in">
+<section class=" p-5 md:py-10 flex items-center justify-center flex-col">
+    <div class="w-full  lg:w-[70%]">
+        <div class="relative  overflow-hidden rounded-lg ">
+            <img class="" src="https://www.juwelo.nl/amg/c55d16e38836b8527c3b62a6f3e6eb5f/1160/media/banner/de/common/gold_silber_homepage/459fd68e_2023-03-15_webbanner_gold_hell.jpg" alt="popular cat" >
+            <div class=" absolute top-0 left-0 w-full h-full flex flex-col  justify-end">
+    
+                <h1 class={`text-2xl md:text-4xl capitalize  m-5 font-light `}>Popular Catagories:</h1>
+                <div class="p-1 hidden md:flex items-center justify-center text-center">
+                    <div class="w-full grid grid-cols-4 md:grid-cols-8 gap-1 text-xs p-2 md:p-4">
+                        {#each popularCategories as {name,img,url}}
+                        <a href={url} class=" shadow-lg flex flex-col gap-3 items-center justify-between p-2 md:p-3 lg:p-5 rounded-xl border border-slate-200  select-none cursor-pointer bg-white">
+                            <div class="rounded-full overflow-hidden w-1/2">
+                                <img src={img} alt={name} class="shadow-lg rounded-full hover:scale-110 transition-all ease-in">
+                            </div>
+                            <h1>{name}</h1>
+                        </a>
+                        {/each}
+                    </div>
                 </div>
-                <h1>{name}</h1>
-            </a>
-            {/each}
+            </div>
+        </div>
+        <div class="p-1 flex md:hidden items-center justify-center text-center">
+            <div class="w-full grid grid-cols-4 md:grid-cols-8 gap-1 text-xs p-2 md:p-4">
+                {#each popularCategories as {name,img,url}}
+                <a href={url} class=" shadow-lg flex flex-col gap-3 items-center justify-between p-2 md:p-3 lg:p-5 rounded-xl border border-slate-200  select-none cursor-pointer bg-white">
+                    <div class="rounded-full overflow-hidden w-1/2">
+                        <img src={img} alt={name} class="shadow-lg rounded-full hover:scale-110 transition-all ease-in">
+                    </div>
+                    <h1>{name}</h1>
+                </a>
+                {/each}
+            </div>
         </div>
     </div>
 </section>
