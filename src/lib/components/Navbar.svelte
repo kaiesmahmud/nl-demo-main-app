@@ -90,7 +90,7 @@
             </button>
         </div>
         <div class="flex items-center">
-            <a href="tel:123123123" class="p-5 flex items-center gap-3 font-bold">
+            <a href="tel:123123123" class=" hidden p-5 md:flex items-center gap-3 font-bold">
                 <div class="text-xl md:text-2xl">
                     <Icon icon="fluent:call-20-regular" />
                 </div>

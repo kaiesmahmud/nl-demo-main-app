@@ -25,13 +25,21 @@
 <!-- <HeaderSliderCmpnt/> -->
 <!-- <ServiceSection/> -->
 <!-- <CelebritySlider/> -->
-<div class="relative">
+<div class="relative flex  flex-col">
     <img src="https://d186vdbjetg11u.cloudfront.net/static/media/holiday-deals-desktop.4ae49edb320218167a71.webp" alt="">
-    <div class=" absolute top-0 w-full h-full flex items-center justify-center flex-col">
+    <div class="hidden absolute top-0 w-full h-full md:flex items-center justify-center flex-col">
         <div class="flex items-center justify-center flex-col bg-white/60 p-2  lg:p-5 rounded-xl shadow">
             <h1 class={`md:text-md lg:text-2xl capitalize`}>Shop Multicolor</h1>
             <h1 class={`text-md  lg:text-4xl capitalize  m-5 font-semibold `} >Saphire Collection</h1>
             <p class=" cursor-pointer border border-red-500 text-white font-bold p-1 md:px-3 md:py-1 px-5 py-3 rounded-[35px] text-xs md:text-sm lg:text-lg bg-red-500 hover:text-red-500 hover:bg-white">Best Deal</p>
+
+        </div>
+    </div>
+    <div class="md:hidden flex items-center justify-center flex-col w-full bg-white/60">
+        <div class="flex items-center justify-center flex-col  p-2  shadow">
+            <h2 class="capitalize">Shop Multicolor</h2>
+            <h2 class={`text-md  capitalize font-semibold `} >Saphire Collection</h2>
+            <p class=" cursor-pointer border border-blue-500 text-white font-bold px-3 py-1   rounded-[35px] text-xs md:text-sm lg:text-lg bg-blue-500 hover:text-blue-500 hover:bg-white">Best Deal</p>
 
         </div>
     </div>
@@ -59,19 +67,7 @@
 <SaphireCollection/>
 
 <HotDeals/>
-<div class=" bg-black text-white flex flex-col md:flex-row items-center justify-around ">
-    <div class="w-full md:w-1/3 aspect-square overflow-hidden flex items-center justify-center">
-        <img class="w-1/2" src="https://d186vdbjetg11u.cloudfront.net/static/media/lionMobile.21426256cdacc4be4e11.webp" alt="">
-    </div>
-    <div class="w-full md:w-2/3 flex items-center gap-3 flex-col uppercase p-5 text-start">
-        <section  class="w-full flex items-center justify-center py-10">
-            <iframe class="w-[80%] h-auto aspect-[4/2] rounded " width="560" height="315" src="https://www.youtube.com/embed/nqGbaLGFCFo?si=QMBbmSrOH_rf_yL_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
-        <h1 class="text-lg md:text-2xl lg:text-6xl font-bold">our merchandise is</h1>
-        <h1 class="text-xl md:text-3xl font-bold">100% guaranteed</h1>
-        <h1 class="font-bold">As described or full money back</h1>
-    </div>
-</div>
+
+<YoutubeVideo/>
 <Support/>
 
-<!-- <YoutubeVideo/> -->
