@@ -54,7 +54,10 @@
              </div>
         {/each}
         <div class="p-5 py-10 capitalize">
-            subscribe to NewsLetter SEction
+            <h5 class="text-lg md:text-xl lg:text-2xl text-fuchsia-500">Location</h5>
+            <div class="p-1 overflow-hidden rounded">
+                <iframe class="w-full " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1983225743893!2d-73.98386152324579!3d40.7576625713868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258ff09307ea1%3A0x95c9ecb8e9543c0c!2sTraxNYC!5e0!3m2!1sen!2sbd!4v1701339781485!5m2!1sen!2sbd" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
     <footer class="text-xs md:text-sm text-center p-5 italic">Demo Project, 2023 | November. All Rights Reserved | <a href="/admin" class="font-bold hover:text-fuchsia-500 p-3 ">Admin Panel</a></footer>
