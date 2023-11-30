@@ -34,10 +34,10 @@
     ]
 </script>
 
-<div class="flex flex-col items-center justify-center bg-black text-white ">
+<div class="flex flex-col items-center justify-center bg-black text-white w-full">
     <section class=" w-full md:w-[90%] lg:w-[80%] grid grid-cols-2 lg:grid-cols-4 ">
         {#each data as item(item.title)}
-             <div class={`p-5 py-10 capitalize ${item.title === "Popular Collections" && "col-span-2"}`}>
+             <div class={`p-5 py-10 capitalize ${item.title === "Popular Collections" && " col-span-2 md:col-span-1"}`}>
                 <h5 class="text-lg md:text-xl lg:text-2xl text-fuchsia-500">{item.title}</h5>
                 <div class="p-2 md:p-5 flex flex-col gap-5">
                     {#each item.list as i}

@@ -24,7 +24,7 @@ import Icon from '@iconify/svelte';
     ]
 </script>
 
-<div class="bg-blue-100 w-full flex flex-wrap md:flex-nowrap items-center md:gap-5 justify-center px-5 md:px-10 ">
+<div class=" w-full flex flex-wrap md:flex-nowrap  md:gap-5 justify-center px-5 md:px-10 ">
     {#each data as item}
          <!-- content here -->
          <div class="w-1/2 p-2 md:p-4 py-5 md:py-10 flex flex-col items-center justify-center gap-3 border-b-2 border-blue-100 hover:border-blue-500">

@@ -11,10 +11,10 @@
     })
 
 </script>
-<div class="flex items-center justify-center" >
+<div class="flex flex-col items-center justify-center" >
     <div class="w-full lg:w-[80%]">
         <Navbar/>
         <slot/>
-        <Footer/>
     </div>
+    <Footer/>
 </div>

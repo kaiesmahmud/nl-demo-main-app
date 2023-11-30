@@ -48,15 +48,16 @@
             img:"https://d186vdbjetg11u.cloudfront.net/static/media/CUBAN-CURB.c2bf92a042d193227443.webp"
         }, 
     ]
+    export let img ,type;
 </script>
 
 <section class=" p-5 md:py-10 flex items-center justify-center flex-col">
-    <div class="w-full  lg:w-[70%]">
+    <div class="w-full  lg:w-[75%]">
         <div class="relative  overflow-hidden rounded-lg ">
-            <img class="" src="https://www.juwelo.nl/amg/c55d16e38836b8527c3b62a6f3e6eb5f/1160/media/banner/de/common/gold_silber_homepage/459fd68e_2023-03-15_webbanner_gold_hell.jpg" alt="popular cat" >
+            <img class="" src={img} alt="popular cat" >
             <div class=" absolute top-0 left-0 w-full h-full flex flex-col  justify-end">
     
-                <h1 class={`text-2xl md:text-4xl capitalize  m-5 font-light `}>Popular Catagories:</h1>
+                <h1 class={`text-2xl md:text-4xl capitalize  m-5 font-light `}>{type} Catagories:</h1>
                 <div class="p-1 hidden md:flex items-center justify-center text-center">
                     <div class="w-full grid grid-cols-4 md:grid-cols-8 gap-1 text-xs p-2 md:p-4">
                         {#each popularCategories as {name,img,url}}
