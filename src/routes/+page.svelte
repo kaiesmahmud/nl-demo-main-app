@@ -21,11 +21,11 @@
         "Chains", "pendants", "Rings", "Earrings", "Bracelets", "Watches", "Collections", "Special Deals"
     ]
 </script>
-<HeroSection {titleCssMen} {titleCssWomen} />
-<!-- <HeaderSliderCmpnt/> -->
+<HeaderSliderCmpnt/>
+<!-- <HeroSection {titleCssMen} {titleCssWomen} /> -->
 <!-- <ServiceSection/> -->
 <!-- <CelebritySlider/> -->
-<div class="relative flex  flex-col">
+<!-- <div class="relative flex  flex-col">
     <img src="https://d186vdbjetg11u.cloudfront.net/static/media/holiday-deals-desktop.4ae49edb320218167a71.webp" alt="">
     <div class="hidden absolute top-0 w-full h-full md:flex items-center justify-center flex-col">
         <div class="flex items-center justify-center flex-col bg-white/60 p-2  lg:p-5 rounded-xl shadow">
@@ -43,25 +43,25 @@
 
         </div>
     </div>
-</div>
+</div> -->
 
 <CollectionSlider 
     intervalTime={2000} 
     {subCategory} 
     products={$allProductsData} 
-    name={"shop Popular Men's Deal"} 
+    name={"Your Favourites"} 
     titleCss={titleCssMen}
     productCardTypeCss={productCardTypeCssMen}
     />
 
-<CollectionSlider 
+<!-- <CollectionSlider 
     intervalTime={2500} 
     subCategory={womenCollectionData.subCategory} 
     products={$allProductsData}
     name={womenCollectionData.title} 
     titleCss={womenCollectionData.titleCss} 
     productCardTypeCss={womenCollectionData.productCardTypeCss}
-    />
+    /> -->
 
 <PopularCat/>
 <SaphireCollection/>

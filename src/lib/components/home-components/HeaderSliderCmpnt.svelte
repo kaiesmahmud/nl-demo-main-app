@@ -15,23 +15,30 @@
     type : 'loop',
     autoplay: true,
     // perPage : 2,
-    interval: 3000,
+    interval: 2500,
     arrows: false,
-    pagination: false,
+    // pagination: false,
     // width: '100%',
   }
+  let data = [
+    "/b-1.png",
+    "/b-2.png",
+    "/b-3.png",
+    "/b-4.png",
+    "/b-2.png",
+  ]
 </script>
-<Splide  options={options}
-  aria-label="My Favorite Images" class="w-full cursor-pointer">
-    {#each  HomePageData.headerSliders as item(item.id)}
-        <SplideSlide >
-          <div class=" rounded shadow-xl">
-            <img src={item.url} alt={item.id}>
-          </div>
-        </SplideSlide>
-    {/each}
-  </Splide>
-
-  <style>
-
-  </style>
+<div class="flex items-center justify-center pt-5">
+  <section class="w-full lg:w-[80%] rounded overflow-hidden">
+    <Splide  options={options}
+      aria-label="My Favorite Images" class="w-full cursor-pointer">
+        {#each  data as item}
+            <SplideSlide >
+              <div class=" rounded shadow-xl">
+                <img src={item} alt={item}>
+              </div>
+            </SplideSlide>
+        {/each}
+      </Splide>
+  </section>
+</div>
