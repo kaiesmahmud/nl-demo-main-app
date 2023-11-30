@@ -13,6 +13,12 @@
         {
             name:"Special Offer",url:"/special-offer"
         },
+        {
+            name:"Contact Us",url:"/contact"
+        },
+        {
+            name:"About US",url:"/about"
+        },
     ]
     let myLinks = [
         {
@@ -53,12 +59,12 @@
                     <Icon icon="teenyicons:down-outline" />
                 </div>
             </div>
-            <div class="flex items-center gap-3">
+            <!-- <div class="flex items-center gap-3">
                 USA
                 <div class="text-sm">
                     <Icon icon="teenyicons:down-outline" />
                 </div>
-            </div>
+            </div> -->
             <div class="flex gap-1 ">
                 <div >
                     Sign in /
@@ -70,7 +76,7 @@
         </div>
 
     </div>
-    <div class=" p-2 md:p-4 flex items-center justify-between md:justify-around">
+    <div class=" p-2 md:p-4 flex items-center justify-between md:px-10">
         <a href="/" class="flex items-center gap-1 md:gap-5">
             <div class="w-10">
                 <img src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="TRAXNYC">
@@ -88,6 +94,36 @@
             <a href={item.url} class={navItemStyle}>{item.name}</a>
             {/each}
         </div> -->
+        <!-- <div class="hidden md:flex items-center gap-2 md:gap-4">
+            {#each myLinks as item(item.name)}
+                 <a href={item.url} class={myLinksStyle}>
+                     <div class="text-xl md:text-3xl">
+                         <Icon icon={item.icon} />
+                     </div>
+                     <p class=" hidden lg:inline-block">{item.name}</p>
+                 </a>
+            {/each}
+        </div> -->
+        <a href="tel:123123123" class="p-5 flex items-center gap-3 font-bold">
+            <div class="text-xl md:text-2xl">
+                <Icon icon="fluent:call-20-regular" />
+            </div>
+            <p>123 456 7890</p>
+        </a>
+        <div class=" md:hidden">
+            {#if !showNav}
+                <button on:click={handleNav} class="text-4xl md:hidden">
+                    <Icon icon="jam:menu" />
+                </button>            
+            {/if}
+        </div>
+    </div>
+    <div class="bg-black text-white flex items-center justify-between p-3 md:px-10">
+        <div class=" hidden md:flex items-center gap-1">
+            {#each navItems as item(item.name)}
+            <a href={item.url} class={navItemStyle}>{item.name}</a>
+            {/each}
+        </div>
         <div class="hidden md:flex items-center gap-2 md:gap-4">
             {#each myLinks as item(item.name)}
                  <a href={item.url} class={myLinksStyle}>
@@ -98,13 +134,7 @@
                  </a>
             {/each}
         </div>
-        <div class=" md:hidden">
-            {#if !showNav}
-                <button on:click={handleNav} class="text-4xl md:hidden">
-                    <Icon icon="jam:menu" />
-                </button>            
-            {/if}
-        </div>
+
     </div>
     {#if showNav}
          <div class=" md:hidden min-h-screen fixed top-0 w-screen transition-all ease-in flex flex-col  z-[1000]">
