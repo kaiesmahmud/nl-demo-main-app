@@ -58,10 +58,11 @@
                 <div class="text-sm p-2 font-semibold">
                   {p_name.substring(0,35)}...  
                 </div>
-                <div class="p-1 md:p-2 flex items-center justify-between text-black/80">
-                  <div class="rounded-[25px] p-1 md:p-2 px-2 md:px-3 text-xs font-light">{p_type}</div>
-                  <div class="rounded-[25px] p-1 md:p-2 px-3 text-xs md:text-sm font-bold">${p_price}</div>
+                <div class="rounded-[25px] p-1 md:p-2 px-3 text-xs md:text-sm font-bold text-center">
+                  <span class=" line-through text-red-500 text-sm font-extralight">${p_reg_price}</span> 
+                  ${p_price}
                 </div>
+                <div class="p-1 md:p-2 px-2 md:px-3 text-xs font-light text-center bg-yellow-500/10">{p_type}</div>
               </a>
             </SplideSlide>
         {/each}
