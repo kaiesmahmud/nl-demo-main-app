@@ -42,8 +42,8 @@
     }
 </script>
 
-<div class="bg-white">
-    <div class="flex items-center justify-between px-3 md:px-5 py-2 md:py-3">
+<div class="bg-white text-sm">
+    <div class="flex items-center justify-between px-3 md:px-5 md:py-2 ">
         <div class="flex items-center gap-3">
             <div class="text-xl">
                 <Icon icon="carbon:location" />
@@ -84,7 +84,7 @@
             <h1 class=" font-light text-lg md:text-xl lg:text-3xl">TRAXNYC</h1>
         </a>
         <div class="flex w-[25%]">
-            <input type="text" class="bg-slate-200 w-full">
+            <input type="text" class="bg-slate-200 w-full rounded p-2" placeholder="Search Jewelry">
             <button class="text-xl md:text-2xl lg:text-3xl bg-slate-100 rounded p-2">
                 <Icon icon="material-symbols-light:search" />
             </button>
