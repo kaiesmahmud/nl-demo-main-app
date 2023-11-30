@@ -9,6 +9,8 @@
     import { allProductsData } from '../lib/store/store';
     import HeroSection from '../lib/components/home-components/HeroSection.svelte';
     import PopularCat from '../lib/components/home-components/PopularCat.svelte';
+    import SaphireCollection from '../lib/components/home-components/SaphireCollection.svelte';
+    import HotDeals from '../lib/components/home-components/HotDeals.svelte';
 
     let titleCssMen= "text-transparent capitalize bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600"
     let titleCssWomen= "text-transparent capitalize bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400"
@@ -45,6 +47,8 @@
     <img src="https://d186vdbjetg11u.cloudfront.net/static/media/holiday-deals-desktop.4ae49edb320218167a71.webp" alt="">
 </div>
 <PopularCat/>
+<SaphireCollection/>
+<HotDeals/>
 <div class="bg-black text-white flex flex-col md:flex-row items-center justify-around ">
     <div class="w-full md:w-1/2 aspect-square overflow-hidden flex items-center justify-center">
         <img class="w-1/2" src="https://d186vdbjetg11u.cloudfront.net/static/media/lionMobile.21426256cdacc4be4e11.webp" alt="">
