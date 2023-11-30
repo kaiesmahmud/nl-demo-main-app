@@ -1,8 +1,8 @@
 <script>
     let data = [
-        {name:"Best Golden Rings" , img:"/lux-1.png"},
-        {name:"Best Silver Rings" , img:"/lux-2.png"},
-        {name:"Best Diamond Rings" , img:"/lux-3.png"},
+        {title:"Best Golden Rings" , img:"/lux-1.png",color: "bg-yellow-100"},
+        {title:"Best Silver Rings" , img:"/lux-2.png",color: "bg-gray-100"},
+        {title:"Best Diamond Rings" , img:"/lux-3.png",color: "bg-gray-100"},
     ]
 
 </script>
@@ -13,14 +13,13 @@
         <div class="rounded overflow-hidden p-10 lg:p-2">
             <img class="rounded" src="/luxury-1.png" alt="">
         </div>
-        <div class="flex flex-col gap-5 p-10 lg:p-2">
-            {#each data as {name,img}}
-                 <!-- content here -->
+        <div class="flex flex-col gap-5 p-5  md:p-10 lg:p-2">
+            {#each data as {title,img,color}}
+                 <div class="flex rounded overflow-hidden shadow">
+                     <img class="w-1/2 " src={img} alt={title}>
+                     <p class={`${color} text-xl md:text-3xl flex items-center justify-center text-center w-full`}>{title}</p>
+                 </div>
             {/each}
-            <div class="flex rounded overflow-hidden shadow">
-                <img class="w-1/2 " src={img} alt={name}>
-                <p class="bg-yellow-100 text-xl md:text-3xl flex items-center justify-center text-center w-full">{name}</p>
-            </div>
             
         </div>
     </section>
