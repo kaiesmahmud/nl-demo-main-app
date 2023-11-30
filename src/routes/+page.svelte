@@ -5,6 +5,7 @@
     import CollectionSlider from '../lib/components/home-components/CollectionSlider.svelte';
     import { menCollectionData, womenCollectionData } from '../lib/store/dummydata';
     import Support from '../lib/components/Support.svelte';
+    import { allProductsData } from '../lib/store/store';
 
     
 </script>
@@ -26,21 +27,21 @@
 <CollectionSlider 
     intervalTime={2000} 
     subCategory={menCollectionData.subCategory} 
-    products={menCollectionData.products} 
+    products={$allProductsData} 
     name={menCollectionData.title} 
     titleCss={menCollectionData.titleCss}
     productCardTypeCss={menCollectionData.productCardTypeCss}
 
     />
 
-<CollectionSlider 
+<!-- <CollectionSlider 
     intervalTime={2500} 
     subCategory={womenCollectionData.subCategory} 
     products={womenCollectionData.products} 
     name={womenCollectionData.title} 
     titleCss={womenCollectionData.titleCss} 
     productCardTypeCss={womenCollectionData.productCardTypeCss}
-    />
+    /> -->
 
     
 <div class="bg-black text-white flex flex-col md:flex-row items-center justify-around ">
