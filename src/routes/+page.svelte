@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="md:hidden flex items-center justify-center flex-col w-full bg-white/60">
-        <div class="flex items-center justify-center flex-col  p-2  shadow">
+        <div class="flex items-center justify-center flex-col  p-2 ">
             <h2 class="capitalize">Shop Multicolor</h2>
             <h2 class={`text-md  capitalize font-semibold `} >Saphire Collection</h2>
             <p class=" cursor-pointer border border-blue-500 text-white font-bold px-3 py-1   rounded-[35px] text-xs md:text-sm lg:text-lg bg-blue-500 hover:text-blue-500 hover:bg-white">Best Deal</p>
