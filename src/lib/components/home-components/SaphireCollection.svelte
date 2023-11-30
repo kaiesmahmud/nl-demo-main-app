@@ -2,7 +2,7 @@
 
 </script>
 
-<section class=" flex items-center justify-center w-full   p-5">
+<section class=" flex items-center justify-center w-full   md:p-5">
     <!-- <div class="w-full md:w-1/2 flex items-start md:items-center justify-center gap-2 flex-col z-[5] p-5">
         <h1 class={`text-xs md:text-xl lg:text-2xl capitalize`}>Shop Multicolor</h1>
         <h1 class={`text-sm md:text-2xl lg:text-4xl capitalize  md:m-5 font-semibold `} >Saphire Collection</h1>

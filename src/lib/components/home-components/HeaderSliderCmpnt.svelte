@@ -28,7 +28,7 @@
     "/b-2.png",
   ]
 </script>
-<div class="flex items-center justify-center pt-5">
+<div class="flex items-center justify-center p-5">
   <section class="w-full lg:w-[80%] rounded overflow-hidden">
     <Splide  options={options}
       aria-label="My Favorite Images" class="w-full cursor-pointer">
