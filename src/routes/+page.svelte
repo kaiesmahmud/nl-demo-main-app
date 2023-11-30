@@ -57,10 +57,9 @@
 
 <PopularCat/>
 <SaphireCollection/>
-<Support/>
 
 <HotDeals/>
-<div class="bg-black text-white flex flex-col md:flex-row items-center justify-around ">
+<div class=" bg-black text-white flex flex-col md:flex-row items-center justify-around ">
     <div class="w-full md:w-1/3 aspect-square overflow-hidden flex items-center justify-center">
         <img class="w-1/2" src="https://d186vdbjetg11u.cloudfront.net/static/media/lionMobile.21426256cdacc4be4e11.webp" alt="">
     </div>
@@ -73,4 +72,6 @@
         <h1 class="font-bold">As described or full money back</h1>
     </div>
 </div>
+<Support/>
+
 <!-- <YoutubeVideo/> -->
