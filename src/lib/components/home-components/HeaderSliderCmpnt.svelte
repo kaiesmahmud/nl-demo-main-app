@@ -15,7 +15,7 @@
     type : 'loop',
     autoplay: true,
     // perPage : 2,
-    interval: 2500,
+    interval: 3500,
     arrows: false,
     // pagination: false,
     // width: '100%',
