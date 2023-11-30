@@ -12,6 +12,7 @@
     import SaphireCollection from '../lib/components/home-components/SaphireCollection.svelte';
     import HotDeals from '../lib/components/home-components/HotDeals.svelte';
     import YoutubeVideo from '../lib/components/home-components/YoutubeVideo.svelte';
+    import CertainJewelry from '../lib/components/home-components/CertainJewelry.svelte';
 
     let titleCssMen= "text-transparent capitalize bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600"
     let titleCssWomen= "text-transparent capitalize bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400"
@@ -62,8 +63,9 @@
     titleCss={womenCollectionData.titleCss} 
     productCardTypeCss={womenCollectionData.productCardTypeCss}
     /> -->
-
+<CertainJewelry/>
 <PopularCat/>
+
 <SaphireCollection/>
 
 <HotDeals/>
