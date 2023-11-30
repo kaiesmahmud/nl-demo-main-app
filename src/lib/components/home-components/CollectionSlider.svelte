@@ -47,7 +47,7 @@
     aria-label="My Favorite Images" class="w-full cursor-pointer">
       {#each  products as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
           <SplideSlide  class="w-[55%] md:w-[40%] lg:w-[20%] flex items-center justify-center m-1">
-            <a href={`/men-collection/${p_url}`} class=" overflow-visiblerounded shadow-xl bg-white m-3 md:m-5 py-3 md:py-5 rounded">
+            <a href={`/${cat_name}/${p_url}`} class=" overflow-visiblerounded shadow-xl bg-white m-3 md:m-5 py-3 md:py-5 rounded">
               <p class={`font-bold text-white text-sm text-center uppercase py-2 px-3 ${productCardTypeCss}`}>{p_type}</p>
               <div class="relative w-full">
                   <div class=" object-center aspect-square overflow-hidden rounded flex items-center justify-center bg-white">

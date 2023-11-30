@@ -32,7 +32,7 @@
             url:"/cart"
         },
     ]
-    let navItemStyle = "border-b-2 border-slate-800   px-5 py-3  font-semibold text-sm lg:text-lg transition-all ease-in"
+    let navItemStyle = " px-5 py-3  font-semibold text-sm lg:text-lg transition-all ease-in"
     let myLinksStyle = "flex gap-3 md:gap-0 items-center md:justify-center px-3 py-1 font-semibold transition-all ease-in  "
 
     let showNav = false ;
@@ -42,10 +42,10 @@
     }
 </script>
 
-<div class="bg-white text-sm">
+<div class="bg-white text-xs">
     <div class="flex items-center justify-between px-3 md:px-5 md:py-2 ">
         <div class="flex items-center gap-3">
-            <div class="text-xl">
+            <div class="text-sm">
                 <Icon icon="carbon:location" />
             </div>
             21ST, City name here
@@ -55,7 +55,7 @@
                 <p>
                     English
                 </p>
-                <div class="text-sm">
+                <div class="text-xs">
                     <Icon icon="teenyicons:down-outline" />
                 </div>
             </div>
@@ -118,10 +118,10 @@
             {/if}
         </div>
     </div>
-    <div class="bg-black text-white flex items-center justify-between p-3 md:px-10">
+    <div class="bg-black text-white flex items-center justify-between  md:px-10">
         <div class=" hidden md:flex items-center gap-1">
             {#each navItems as item(item.name)}
-            <a href={item.url} class={navItemStyle}>{item.name}</a>
+            <a href={item.url} class={` border-y-4 border-black hover:border-blue-500 hover:text-blue-300 ${navItemStyle}`}>{item.name}</a>
             {/each}
         </div>
         <div class="hidden md:flex items-center gap-2 md:gap-4">
