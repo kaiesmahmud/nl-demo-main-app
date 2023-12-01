@@ -54,7 +54,7 @@
 <section class=" p-5 md:py-10 flex items-center justify-center flex-col">
     <div class="w-full  lg:w-[75%]">
         <div class="relative  overflow-hidden rounded-lg ">
-            <img class="" src={img} alt="popular cat" >
+            <img class="w-full" src={img} alt="popular cat" >
             <div class=" absolute top-0 left-0 w-full h-full flex flex-col  justify-end">
     
                 <h1 class={`text-2xl md:text-4xl capitalize  m-5 font-light `}>{type} Catagories:</h1>
