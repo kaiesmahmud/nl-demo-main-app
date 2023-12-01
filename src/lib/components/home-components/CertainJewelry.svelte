@@ -9,7 +9,7 @@
 
 <div class="flex flex-col items-center justify-center">
     <h1 class="text-xl lg:text-2xl font-semibold p-5 capitalize ">Are you looking for certain types of jewelry?</h1>
-    <section class="w-full lg:w-[80%]">
+    <section class="w-full lg:w-[75%]">
         <div class=" grid grid-cols-2 md:grid-cols-4 gap-5 p-5">
             {#each data as {name,url}}
                 <div class="rounded overflow-hidden text-center text-xl md:text-2xl capitalize bg-slate-200">
