@@ -21,11 +21,11 @@
     // width: '100%',
   }
   let data = [
-    "/b-1.png",
+    // "/b-1.png",
     "/b-2.png",
     "/b-3.png",
     "/b-4.png",
-    "/b-2.png",
+    // "/b-2.png",
   ]
 </script>
 <div class="flex items-center justify-center p-5">

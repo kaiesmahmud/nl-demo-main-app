@@ -11,7 +11,7 @@
     })
 
 </script>
-<div class="flex flex-col items-center justify-center" >
+<div class="flex flex-col items-center justify-center max-w-[2480px]" >
     <div class="w-full lg:w-[80%]">
         <Navbar/>
         <slot/>
