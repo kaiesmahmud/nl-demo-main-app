@@ -8,10 +8,10 @@
     import AdminSEO from './AdminSEO.svelte';
 
     let showItemsName = [
+        "all-products",
         "analytics",
         "seo",
         "all-category",
-        "all-products",
         "all-users",
         "all-orders",
     ]

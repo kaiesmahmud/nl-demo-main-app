@@ -10,7 +10,8 @@
 
     // or only core styles
     import '@splidejs/svelte-splide/css/core';
-    export let intervalTime , products , name ,subCategory ,titleCss ,productCardTypeCss
+    export let intervalTime , products , name 
+    // , subCategory ,titleCss ,productCardTypeCss
 
     let options={
         type   : 'loop',

@@ -3,21 +3,6 @@
     import AdminNav from "../../lib/components/admin-dashboard/AdminNav.svelte";
     let adminNavItems = [
         {
-            name:"analytics",
-            icon: "arcticons:adobe-analytics" ,
-            value:"analytics"
-        },
-        {
-            name:"Search Engine Optimization",
-            icon: "arcticons:auditor"  ,
-            value:"seo"
-        },
-        {
-            name:"All-Category",
-            icon: "material-symbols-light:category-outline" ,
-            value:"all-category"
-        },
-        {
             name:"All-Products",
             icon: "circum:shop",
             value:"all-products"
@@ -29,9 +14,27 @@
         },
         {
             name:"All-Orders",
-            icon: "fluent-mdl2:reservation-orders",
+            // icon: "fluent-mdl2:reservation-orders",
+            icon: "lets-icons:order-light",
             value:"all-orders"
         },
+        {
+            name:"All-Category",
+            icon: "material-symbols-light:category-outline" ,
+            value:"all-category"
+        },
+
+        {
+            name:"analytics",
+            icon: "arcticons:adobe-analytics" ,
+            value:"analytics"
+        },
+        {
+            name:"Search Engine Optimization",
+            icon: "arcticons:auditor"  ,
+            value:"seo"
+        },
+        
     ]
     
 </script>
