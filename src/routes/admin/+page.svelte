@@ -36,7 +36,7 @@
     
 </script>
 
-<div class="min-h-screen flex flex-col md:flex-row gap-2 p-3 md:p-5 ">
+<div class=" flex flex-col md:flex-row gap-2 p-3 md:p-5 bg-slate-100 ">
     <AdminNav {adminNavItems}  />
     <AdminBody/>
 </div>

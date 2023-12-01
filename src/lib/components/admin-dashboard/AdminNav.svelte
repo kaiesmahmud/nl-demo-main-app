@@ -25,7 +25,7 @@
     
 </script>
 
-<section class="w-full md:w-1/3 bg-black/20 rounded shadow-lg p-3 md:p-5">
+<section class="w-full md:w-1/3 bg-white  rounded shadow-lg p-3 md:p-5">
     <div class="flex justify-between items-center">
         <h1 class="font-bold text-xl md:text-2xl">Admin Dashboard</h1>
         <button on:click={handleShowBar} class="text-xl md:text-2xl md:hidden p-3 rounded-full bg-black/10">
@@ -36,7 +36,7 @@
     {#if showBar }
     <div class=" flex md:hidden flex-col gap-3  my-5">
         {#each adminNavItems as item}
-        <button on:click={()=>handleUpdateAdminNavItemView(item.value)} class={`p-3 w-full hover:bg-white flex items-center justify-between rounded ${$showAdminNavItem === item.value && " bg-white "}   ${($showAdminNavItem !== item.value) && "bg-white/50"}`}>
+        <button on:click={()=>handleUpdateAdminNavItemView(item.value)} class={`border-l-2 hover:border-black p-3 w-full shadow hover:bg-white flex items-center justify-between rounded ${$showAdminNavItem === item.value && " bg-white "}   ${($showAdminNavItem !== item.value) && "bg-white/50"}`}>
             <div class="flex items-center gap-3">
                 <div class="text-xl md:text-2xl">
                     <Icon icon={item.icon} />                    
@@ -53,7 +53,7 @@
     {/if}
     <div class="hidden md:flex flex-col gap-3  my-5">
         {#each adminNavItems as item}
-        <button on:click={()=>handleUpdateAdminNavItemView(item.value)} class={`p-3 w-full hover:bg-white flex items-center justify-between rounded ${$showAdminNavItem === item.value && " bg-white "}   ${($showAdminNavItem !== item.value) && "bg-white/50"}`}>
+        <button on:click={()=>handleUpdateAdminNavItemView(item.value)} class={`border-l-2 hover:border-black p-3 w-full shadow hover:shadow-md hover:bg-white flex items-center justify-between rounded ${$showAdminNavItem === item.value && " bg-white "}   ${($showAdminNavItem !== item.value) && "bg-white/50"}`}>
             <div class="flex items-center gap-3">
                 <div class="text-xl md:text-2xl">
                     <Icon icon={item.icon} />                    
