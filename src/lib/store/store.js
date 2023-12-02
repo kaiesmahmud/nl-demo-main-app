@@ -154,3 +154,8 @@ export let showAdminNavItem = writable("all-products")
 export let allProductsData = writable([])
 
 export let allcategory = writable([])
+export let myCartData = writable([
+    
+])
+export let myPurchaseProductsData = writable([])
+
