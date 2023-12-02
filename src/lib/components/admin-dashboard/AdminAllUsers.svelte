@@ -6,35 +6,53 @@
 
 <div>
     <h1 class="font-bold text-xl md:text-2xl ">All Users</h1>
+
     {#if $allUsersData}
-    <div class="flex flex-col gap-3 p-3">
-        {#each $allUsersData as {user_id,user_email,user_fname,user_lname,user_img,user_order,user_phone,}}
-            <div class="flex gap-3 border-b-2 border-red-500 pb-3">
-                <div class=" w-1/3 md:w-auto flex items-center justify-center">
-                    {#if user_img}
-                    <div class="w-full flex items-center justify-center text-4xl">
-                        <img src={user_img} alt={user_fname}>
-                    </div>
-                    {:else}
-                    <div class="min-w-[80px] aspect-square bg-slate-200 rounded-full  flex items-center justify-center text-4xl">
-                        <Icon icon="bi:person" />
-                    </div>
-                    {/if}
-                </div>
-                <div class="font-semibold text-xs md:text-sm flex flex-col gap-3 w-full p-1 justify-center">
-                    <div class="flex md:items-center gap-3 justify-between flex-col md:flex-row">
-                        <p class=" capitalize">Name: {user_fname} {user_lname}</p>
-                        <p>Phone: {user_phone}</p>
-                    </div>
-                    <div class="flex md:items-center gap-3 justify-between flex-col md:flex-row">
-                        <p>Email: {user_email}</p>
-                        <p>Orders: {user_order}</p>
-                    </div>
-                </div>
+        <div class="flex flex-col gap-3 p-3">
+            <table class=" text-xs md:text-sm">
+                    <tr>
+                        <th class=" border-b"> ID</th>
+                        <th class="border-l border-b"> Name</th>
+                        <th class="border-l border-b"> Email</th>
+                        <th class="border-l border-b">Phone</th>
+                        <th class="border-l border-b">Role</th>
+                        <th class="border-l border-b">Orders</th>
+                        <!-- <th class="border-l border-b">Orders</th> -->
+                    </tr>
+                    {#each $allUsersData as {user_id,user_email,user_fname,user_lname,user_img,user_order,user_phone,}}
+                        <tr class=" ">
+                            <td class="border-b-2 p-1  font-light flex items-center gap-3">
+                                {#if user_img}
+                                     {user_img}
+                                {:else}
+                                <div class="w-12 rounded-full overflow-hidden">
+                                    <img class="w-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                </div>
+                                {/if}
+                                {user_id}
+                            </td>
+                            <!-- <td class="border-b-2 p-3  font-light"></td> -->
+                            <td class="border-l border-b-2 p-2 capitalize font-semibold">{user_fname} {user_lname}</td>
+                            <td class="border-l border-b-2 p-2">{user_email}</td>
+                            <td class="border-l border-b-2 p-2">{user_phone || 123123123098}</td>
+                            <td class="border-l border-b-2 p-2">customer</td>
+                            <td class="border-l border-b-2 p-2">{user_order || "Nothing"}</td>
+                        </tr>
+                    {/each}
+                    
+            </table>
 
-             </div>
-        {/each}
-
-    </div>
+        </div>
     {/if}
 </div>
+
+<style>
+    /* th{
+        border-left: 1px solid gray;
+        padding: 5px;
+    }
+    td{
+        border-bottom: 1px solid gray;
+        padding: 5px;
+    } */
+</style>
