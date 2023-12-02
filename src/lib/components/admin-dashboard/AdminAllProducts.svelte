@@ -52,14 +52,18 @@
                         <p class="py-2"><span class="font-bold" >URL: </span>{cat_id}/{p_url}</p>
                     </div>
                 </div>
-                <div class="flex gap-3 text-white py-3">
-                    <button class="px-3 py-1 md:px-5 bg-red-500 rounded flex items-center gap-2">
+                <div class="flex gap-1 md:gap-3 text-white py-3 capitalize">
+                    <button class="px-3 py-1 md:px-5 bg-red-500 rounded flex items-center gap-2 ">
                         <Icon icon="material-symbols-light:delete-outline" />
                         <p class="text-sm">Delete</p>
                     </button>
-                    <button class="px-3 py-1 md:px-5 bg-slate-500 rounded text-xl flex items-center gap-2">
+                    <button class="px-3 py-1 md:px-5 bg-slate-500 rounded text-xl flex items-center gap-2 capitalize ">
                         <Icon icon="carbon:edit" />
                         <p class="text-sm">update</p>
+                    </button>
+                    <button class="px-3 py-1 md:px-5 bg-teal-500 rounded text-xl flex items-center gap-2 capitalize">
+                        <!-- <Icon icon="carbon:edit" /> -->
+                        <p class="text-sm">Meta Data</p>
                     </button>
                 </div>
              </div>

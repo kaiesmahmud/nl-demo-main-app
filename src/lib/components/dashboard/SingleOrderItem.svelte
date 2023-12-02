@@ -9,16 +9,16 @@
         <div class="flex flex-col justify-center pl-3">
             <p class="font-semibold text-lg">{item.name}</p>
             <div class="flex items-center gap-5">
-                <p class="font-bold text-purple-500">${item.price}</p>
+                <p class="font-bold font-nunito text-red-500">${item.price}</p>
                 <p class="text-xs">{item.type}</p>
             </div>
         </div>
     </div>
     <div class="flex flex-col gap-1 justify-center px-3 text-center">
-        <div class={`px-2 py-1 rounded uppercase text-xs font-bold  ${item.status === "delivered" && 'bg-green-500'}  ${item.status !== "delivered" && 'bg-orange-500'}`}>
+        <div class={`px-2 py-1 rounded uppercase text-xs font-bold  ${item.status === "delivered" && 'bg-green-500'}  ${item.status !== "delivered" && 'bg-red-500'}`}>
             {item.status}
         </div>
-        <a href={item.url} class="px-2 py-1 rounded uppercase text-xs font-bold bg-slate-500 text-white">View Details</a>
+        <a href={item.url} class="px-2 py-1 rounded uppercase text-xs font-bold ">View Details</a>
     </div>
 
 </div>

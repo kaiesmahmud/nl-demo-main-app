@@ -36,7 +36,7 @@
     {#if showBar }
     <div class=" flex md:hidden flex-col gap-3  my-5">
         {#each adminNavItems as item}
-        <button on:click={()=>handleUpdateAdminNavItemView(item.value)} class={`border-l-2 hover:border-black p-3 w-full shadow hover:bg-white flex items-center justify-between rounded ${$showAdminNavItem === item.value && " bg-white "}   ${($showAdminNavItem !== item.value) && "bg-white/50"}`}>
+        <button on:click={()=>handleUpdateAdminNavItemView(item.value)} class={`border-l-2 hover:border-black p-3 w-full shadow bg-white flex items-center justify-between rounded `}>
             <div class="flex items-center gap-3">
                 <div class="text-xl md:text-2xl">
                     <Icon icon={item.icon} />                    

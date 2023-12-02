@@ -43,11 +43,13 @@
                 {i.url}
             </a>
             <div class="flex gap-3 text-white">
-                <button class="px-3 py-1 md:px-5 bg-red-500 rounded">
+                <button class="px-3 py-1 md:px-4 bg-red-500 rounded flex items-center gap-2">
                     <Icon icon="maki:cross" />
+                    <p class="text-xs md:text-sm font-semibold">Delete</p>
                 </button>
-                <button class="px-3 py-1 md:px-5 bg-green-500 rounded text-xl">
+                <button class="px-3 py-1 md:px-4 bg-green-500 rounded text-xl flex items-center gap-2">
                     <Icon icon="carbon:edit" />
+                    <p class="text-xs md:text-sm font-semibold">Update</p>
                 </button>
             </div>
         </div>
