@@ -75,7 +75,7 @@
             <h1 class=" font-light text-lg md:text-xl lg:text-3xl">TRAXNYC</h1>
         </a>
         <div class="w-[25%] hidden lg:flex border rounded border-red-200">
-            <input type="text" class=" w-full rounded p-2 " placeholder="Search Jewelry">
+            <input type="text" class="p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-white sm:text-sm sm:leading-6" placeholder="Search Jewelry">
             <button class="text-xl md:text-2xl lg:text-3xl bg-red-100 rounded p-2">
                 <Icon icon="material-symbols-light:search" />
             </button>
