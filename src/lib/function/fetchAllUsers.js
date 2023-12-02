@@ -8,7 +8,7 @@ export const fetchAllUsers = async()=>{
       };
     const response = await fetch(url,requestOptions)
     const data = await response.json()
-     console.log("Fetch function data -",data.data)
+    //  console.log("Fetch function data -",data.data)
     allUsersData.set(data.data);
        
 }

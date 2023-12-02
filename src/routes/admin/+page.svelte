@@ -14,7 +14,7 @@
         },
         {
             name:"Add-Products",
-            icon: "circum:shop",
+            icon: "material-symbols-light:add"  ,
             value:"add-products"
         },
         {

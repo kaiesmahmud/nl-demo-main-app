@@ -1,16 +1,16 @@
 <script>
 	import { allProductsData } from './../../store/store.js';
     import Icon from '@iconify/svelte';
-
+    console.log($allProductsData)
 </script>
 
 <div>
     <div class="flex items-center justify-between py-2">
         <h1 class="font-bold text-xl md:text-2xl ">All Products</h1>
-        <button class="px-3 py-1 md:px-5 bg-red-500 rounded text-xl flex items-center gap-3 text-white">
+        <!-- <button class="px-3 py-1 md:px-5 bg-red-500 rounded text-xl flex items-center gap-3 text-white">
             <Icon icon="carbon:add-filled" />
             <p class="text-sm font-bold">Add Product</p>
-        </button>
+        </button> -->
     </div>
     <!-- ======Add New Product======== -->
     <div class="pb-3 border-b-2 flex gap-3 w-full ">
