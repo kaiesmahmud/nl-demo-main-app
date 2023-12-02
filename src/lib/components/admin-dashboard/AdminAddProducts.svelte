@@ -4,21 +4,22 @@
 <h1 class="font-bold text-xl md:text-2xl pb-3">Add Products</h1>
 <hr>
 <form>
+    <!-- {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}} -->
     <div class="space-y-12">
         <div class="border-b border-gray-900/10 pb-12">
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 <!-- =================Product Name=================== -->
                 <div class="sm:col-span-3">
-                    <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Product name</label>
+                    <label for="p_name" class="block text-sm font-medium leading-6 text-gray-900">Product name</label>
                     <div class="mt-2">
-                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <input type="text" name="p_name" id="p_name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     </div>
                 </div>
 <!-- ====================Category==================== -->
                 <div class="sm:col-span-3">
-                    <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Category</label>
+                    <label for="cat_id" class="block text-sm font-medium leading-6 text-gray-900">Category</label>
                     <div class="mt-2">
-                    <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                    <select id="cat_id" name="cat_id" autocomplete="cat_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
                         <option>/men-collection</option>
                         <option>/women-collection</option>
                         <option>/custom</option>
@@ -28,11 +29,11 @@
                 </div>
 <!-- ====================Product URL================= -->
                 <div class="col-span-full">
-                    <label for="username" class="block text-sm font-medium leading-6 text-gray-900">URL</label>
+                    <label for="p_url" class="block text-sm font-medium leading-6 text-gray-900">URL</label>
                     <div class="mt-2">
                         <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                         <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">traxnyc.com/category/</span>
-                        <input type="text" name="username" id="username" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="diamond-ring">
+                        <input type="text" name="p_url" id="p_url"  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="diamond-ring">
                         </div>
                     </div>
                 </div>
@@ -62,9 +63,9 @@
                 or
                 </div>
                 <div class="col-span-full">
-                <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Image URL</label>
+                <label for="p_img" class="block text-sm font-medium leading-6 text-gray-900">Image URL</label>
                 <div class="mt-2">
-                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <input type="text" name="p_img" id="p_img"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
                 </div>
                 <div class="col-span-full text-center">
