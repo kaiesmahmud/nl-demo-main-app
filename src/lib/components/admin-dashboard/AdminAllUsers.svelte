@@ -8,8 +8,8 @@
     <h1 class="font-bold text-xl md:text-2xl ">All Users</h1>
 
     {#if $allUsersData}
-        <div class="flex flex-col gap-3 p-3">
-            <table class=" text-xs md:text-sm">
+        <div class=" overflow-hidden overflow-x-scroll max-h-[80vh]">
+            <table class=" text-xs md:text-sm w-full overflow-y-scroll ">
                     <tr>
                         <th class=" border-b"> ID</th>
                         <th class="border-l border-b"> Name</th>
