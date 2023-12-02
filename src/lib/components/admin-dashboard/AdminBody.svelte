@@ -6,6 +6,7 @@
     import AdminAllUsers from './AdminAllUsers.svelte';
     import AdminAllOrders from './AdminAllOrders.svelte';
     import AdminSEO from './AdminSEO.svelte';
+    import AdminAddProducts from './AdminAddProducts.svelte';
 
     let showItemsName = [
         "all-products",
@@ -36,5 +37,8 @@
     {/if}
     {#if $showAdminNavItem === "all-orders"}
         <AdminAllOrders/>
+    {/if}
+    {#if $showAdminNavItem === "add-products"}
+        <AdminAddProducts/>
     {/if}
 </section>

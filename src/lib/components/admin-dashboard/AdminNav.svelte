@@ -25,7 +25,7 @@
     
 </script>
 
-<section class="w-full md:w-1/3 bg-white  rounded shadow-lg p-3 md:p-5">
+<section class="w-full md:w-1/3 bg-white  rounded shadow-lg p-3 md:p-5 capitalize">
     <div class="flex justify-between items-center">
         <h1 class="font-bold text-xl md:text-2xl">Admin Dashboard</h1>
         <button on:click={handleShowBar} class="text-xl md:text-2xl md:hidden p-3 rounded-full bg-black/10">
@@ -58,7 +58,7 @@
                 <div class="text-xl md:text-2xl">
                     <Icon icon={item.icon} />                    
                 </div>
-                <p class="font-light">{item.name}</p>
+                <p class="font-light text-start">{item.name}</p>
             </div>
             <div>
                 <Icon icon="ep:right" />

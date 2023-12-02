@@ -1,13 +1,21 @@
 <script>
 	import { fetchAllUsers } from './../../lib/function/fetchAllUsers.js';
-    fetchAllUsers();
+    onMount(()=>{
+        fetchAllUsers();
+    })
     import AdminBody from "../../lib/components/admin-dashboard/AdminBody.svelte";
     import AdminNav from "../../lib/components/admin-dashboard/AdminNav.svelte";
+    import { onMount } from 'svelte';
     let adminNavItems = [
         {
             name:"All-Products",
             icon: "circum:shop",
             value:"all-products"
+        },
+        {
+            name:"Add-Products",
+            icon: "circum:shop",
+            value:"add-products"
         },
         {
             name:"All-Users",
@@ -20,14 +28,14 @@
             icon: "lets-icons:order-light",
             value:"all-orders"
         },
-        {
-            name:"All-Category",
-            icon: "material-symbols-light:category-outline" ,
-            value:"all-category"
-        },
+        // {
+        //     name:"All-Category",
+        //     icon: "material-symbols-light:category-outline" ,
+        //     value:"all-category"
+        // },
 
         {
-            name:"analytics",
+            name:"Analytics",
             icon: "arcticons:adobe-analytics" ,
             value:"analytics"
         },
