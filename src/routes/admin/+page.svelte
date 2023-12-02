@@ -1,4 +1,6 @@
 <script>
+	import { fetchAllUsers } from './../../lib/function/fetchAllUsers.js';
+    fetchAllUsers();
     import AdminBody from "../../lib/components/admin-dashboard/AdminBody.svelte";
     import AdminNav from "../../lib/components/admin-dashboard/AdminNav.svelte";
     let adminNavItems = [

@@ -152,6 +152,7 @@ let pendinOrders = [
 export let showPendingOrders = writable(pendinOrders)
 export let showAdminNavItem = writable("all-products")
 export let allProductsData = writable([])
+export let allUsersData = writable([])
 
 export let allcategory = writable([])
 export let myCartData = writable([
