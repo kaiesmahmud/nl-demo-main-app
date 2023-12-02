@@ -41,7 +41,7 @@
                 <h5 class="text-lg md:text-xl lg:text-2xl text-red-500">{item.title}</h5>
                 <div class="p-2 md:p-5 flex flex-col gap-5">
                     {#each item.list as i}
-                         <a href={i.url} class="hover:text-red-400 border-b border-black hover:border-red-400 transition-all ease-in-out px-1 md:px-2 pb-2 flex items-center gap-3">
+                         <a href={i.url} class="hover:text-red-400 border-b border-gray-100 hover:border-red-400 transition-all ease-in-out px-1 md:px-2 pb-2 flex items-center gap-3">
                             {#if i?.icon}
                                 <div class="text-xl">
                                     <Icon icon={i.icon} />
