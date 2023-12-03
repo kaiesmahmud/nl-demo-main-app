@@ -32,19 +32,19 @@
             <div class="w-40">
                 <img src={p_img} alt="">
             </div>
-            <div class="text-xs md:text-sm font-nunito ">
+            <div class="text-xs md:text-sm font-nunito w-full">
                 <div class="flex items-center justify-between py-2">
                     <div>
                         <p><span class="font-bold">ID: </span>{p_id}</p>
                         <p><span class="font-bold">Stock: </span>{p_stock}</p>
                     </div>
                     <div>
-                        <p><span class="font-bold" >Price: </span>{p_price}</p>
-                        <p><span class="font-bold" >Regular Price: </span>{p_reg_price}</p>
+                        <p><span class="font-bold" >Price: </span><span class="text-lg font-bold text-red-500">{p_price}</span></p>
+                        <p><span class="font-bold" >Regular Price: </span > <span class="text-md line-through">{p_reg_price}</span></p>
                     </div>
     
                 </div>
-                <p><span class="font-bold" >Name: </span>{p_name}</p>
+                <p class="text-lg"><span class="font-bold" >Name: </span>{p_name}</p>
                 <p><span class="font-bold" >Category: </span>{cat_name}</p>
                 <p><span class="font-bold" >Type: </span>{p_type}</p>
     

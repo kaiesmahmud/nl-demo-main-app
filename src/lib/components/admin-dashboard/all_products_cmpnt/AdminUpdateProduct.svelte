@@ -1,4 +1,5 @@
 <script>
+	import { updateProductDetails } from './../../../function/updateProductDetail.js';
     export let p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock ,handleShowUpdate
     let pName = p_name
     let pUrl = p_url
@@ -10,10 +11,10 @@
     let pCat = cat_name // --- Need to update or ignore while updating data
     let pCatId = cat_id
 
-    const handleUpdateProductData = (e)=>{
+    const handleUpdateProductData = async(e)=>{
         e.preventDefault()
         let obj = {
-            p_id,
+            p_id:p_id,
             p_name:pName,
             p_url:pUrl,
             cat_id:pCatId,
@@ -25,7 +26,8 @@
             p_stock:pStock
         }
         console.log(obj)
-        handleShowUpdate()
+        let response = await updateProductDetails(obj)
+        if(response) handleShowUpdate()
     }
 </script>
 
@@ -42,16 +44,24 @@
                         <input bind:value={pName} type="text" name="p_name" id="p_name" required  autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
+                    
     <!-- ====================Category==================== -->
                     <div class="sm:col-span-3">
                         <label for="cat_id" class="block text-sm font-medium leading-6 text-gray-900">Category</label>
                         <div class="mt-2">
                             <select bind:value={pCatId} id="cat_id" name="cat_id" autocomplete="cat_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6" required>
                                 <option selected={cat_id == "/women-collection"}>/women-collection</option>
-                                <option selected={cat_id == "/custom"}>/custom</option>
-                                <option selected={cat_id == "/special-offer"}>/special-offer</option>
                                 <option selected={cat_id == "/men-collection"}>/men-collection</option>
+                                <!-- <option selected={cat_id == "/custom"}>/custom</option>
+                                <option selected={cat_id == "/special-offer"}>/special-offer</option> -->
                             </select>
+                        </div>
+                    </div>
+    <!-- ========================Type=============== -->
+                    <div class="sm:col-span-3">
+                        <label for="p_name" class="block text-sm font-medium leading-6 text-gray-900">Product Type</label>
+                        <div class="mt-2">
+                        <input bind:value={pType} type="text" name="p_name" id="p_name" required  autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
     <!-- ====================Product URL================= -->
