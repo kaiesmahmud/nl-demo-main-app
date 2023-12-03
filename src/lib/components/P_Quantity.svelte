@@ -3,11 +3,12 @@
     export let p_price;
     export let increaseTotalPrice;
     export let decreaseTotalPrice;
-
+    export let product;
+    console.log("product is  ", product)
     let qty = 0;
     const increaseQty = ()=>{
         qty++
-        increaseTotalPrice(parseInt(p_price),qty)
+        increaseTotalPrice(parseInt(p_price),product)
     }
     const decreaseQty = ()=>{
         if(qty < 0){
@@ -17,7 +18,7 @@
             qty = 0
             // decreaseTotalPrice(parseInt(p_price),qty)
         }else{
-            decreaseTotalPrice(parseInt(p_price),qty)
+            decreaseTotalPrice(parseInt(p_price),product)
             qty--
         }
     }

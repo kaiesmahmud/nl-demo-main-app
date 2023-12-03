@@ -57,7 +57,7 @@
                     <label for="p_url" class="block text-sm font-medium leading-6 text-gray-900">URL</label>
                     <div class="mt-2">
                         <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                        <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">traxnyc.com/category/</span>
+                        <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm font-nunito">category/</span>
                         <input bind:value={pUrl} type="text" name="p_url" id="p_url"  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="diamond-ring">
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                     <hr>
                 </div>
     <!-- ================Cover Photo =================== -->
-                <div class="col-span-full">
+                <!-- <div class="col-span-full">
                     <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Cover photo</label>
                     <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
                     <div class="text-center">
@@ -86,7 +86,7 @@
                 </div>
                 <div class="col-span-full text-center">
                 or
-                </div>
+                </div> -->
                 <div class="col-span-full">
                 <label for="p_img" class="block text-sm font-medium leading-6 text-gray-900">Image URL</label>
                 <div class="mt-2">

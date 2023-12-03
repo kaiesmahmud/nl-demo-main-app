@@ -13,7 +13,7 @@
     ]
     
 </script>
-<div class="w-full md:w-2/3 bg-red-100 rounded p-2 md:p-5">
+<div class="w-full md:w-2/3 bg-gray-100/80 rounded p-2 md:p-5">
     {#if $showDashboardBodyTopic === "my-order"}
     <MyOrderView/>
     {/if}

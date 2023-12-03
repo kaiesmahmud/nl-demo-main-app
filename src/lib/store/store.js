@@ -155,9 +155,9 @@ export let allProductsData = writable([])
 export let allUsersData = writable([])
 
 export let allcategory = writable([])
-export let myCartData = writable([
-    
-])
+export let myCartData = writable([])
+export let confirmedOrder = writable([])
+
 export let myPurchaseProductsData = writable([])
 export let product_url = writable("")
 

@@ -6,13 +6,13 @@
         "Bracelets","Bangles","Watches", "Ladies Rings", "Necklaces","Men Rings","Earrings"
     ]
     let pRanges = [
-        "0-1000","1000-2000","2000-3000","3000-4000","4000-5000","5000-6000","6000"
+        "$0-$1000","$1000-$2000","$2000-$3000","$3000-$4000","$4000-$5000","$5000-$6000","$6000"
     ]
     console.log($allProductsData)
 </script>
 <div class=" mb-5 text-sm flex gap-5 flex-col md:flex-row">
     <!-- ==========Left Side=============== -->
-    <div class="w-full md:w-1/4 rounded bg-gray-100/50 p-3 md:p-5 ">
+    <div class="w-full md:w-1/4 rounded bg-gray-100/50 p-3 md:p-5 text-xs md:text-sm">
         <p class="text-lg font-semibold p-3">Jewelry</p>
         <div class="flex flex-col gap-3">
             {#each jwlry as i}
