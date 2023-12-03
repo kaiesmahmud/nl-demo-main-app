@@ -34,7 +34,7 @@
     ]
 </script>
 
-<div class="flex flex-col items-center justify-center bg-gray-100 w-full">
+<div class="flex flex-col items-center justify-center bg-gray-100 w-full text-xs md:text-sm">
     <section class=" w-full md:w-[90%] lg:w-[80%] grid grid-cols-2 lg:grid-cols-4 ">
         {#each data as item(item.title)}
              <div class={`p-5 py-10 capitalize ${item.title === "Popular Collections" && " col-span-2 md:col-span-1"}`}>
