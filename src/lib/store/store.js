@@ -159,4 +159,5 @@ export let myCartData = writable([
     
 ])
 export let myPurchaseProductsData = writable([])
+export let product_url = writable("")
 
