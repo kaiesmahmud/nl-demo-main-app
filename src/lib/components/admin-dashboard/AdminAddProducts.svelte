@@ -1,4 +1,6 @@
 <script>
+    import { showAdminNavItem } from '../../store/store.js';
+	import { createNewProduct } from './../../function/createNewProduct.js';
     let pName ,pUrl,pPrice,pRegPrice,pStock,pImg,pType,pCat,pCatId
     const handleCancel=()=>{
         pName=''
@@ -11,19 +13,43 @@
         pCat=''
         pCatId=''
     }
-    const handleSubmit=()=>{
-        let data={
-            p_name:pName,
-            p_url:pUrl,
-            p_price:pPrice,
-            p_reg_price:pRegPrice,
-            p_stock:pStock,
-            p_img:pImg,
-            p_type:pType,
-            cat_id:pCatId,
-            cat_name:pCat
+    const handleSubmit=async (e)=>{
+        e.preventDefault();
+        if(pPrice > 0 && pRegPrice > 0 && pStock > 0){
+            switch (pCatId) {
+                case "/men-collection":
+                    pCat = "men-collection"
+                    break;
+                case "/women-collection":
+                    pCat = "women-collection"
+                    break;
+                case "/custom":
+                    pCat = "custom"
+                    break;
+                case "/special-offer":
+                    pCat = "/special-offer"
+                    break;
+            }
+            let newProduct={
+                p_name:pName,
+                p_url:pUrl,
+                p_price:pPrice,
+                p_reg_price:pRegPrice,
+                p_stock:pStock,
+                p_img:pImg,
+                p_type:pType,
+                cat_id:pCatId,
+                cat_name:pCat
+            }
+            // console.log(data)
+            let result = await createNewProduct(newProduct)
+            if(result){
+                showAdminNavItem.set("all-products")
+            }
         }
-        console.log(data)
+        else{
+            alert("Price and Stock must be greater than 0")
+        }
     }
 </script>
 <h1 class="font-bold text-xl md:text-2xl pb-3">Add Products</h1>
@@ -47,9 +73,16 @@
                     <select bind:value={pCatId} id="cat_id" name="cat_id" autocomplete="cat_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
                         <option>/men-collection</option>
                         <option>/women-collection</option>
-                        <option>/custom</option>
-                        <option>/special-offer</option>
+                        <!-- <option>/custom</option>
+                        <option>/special-offer</option> -->
                     </select>
+                    </div>
+                </div>
+<!-- =================Product Type=================== -->
+                <div class="sm:col-span-3">
+                    <label for="p_name" class="block text-sm font-medium leading-6 text-gray-900">Product type</label>
+                    <div class="mt-2">
+                    <input bind:value={pType} type="text" name="p_name" id="p_name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     </div>
                 </div>
 <!-- ====================Product URL================= -->
@@ -101,21 +134,21 @@
                 <div class="sm:col-span-2 sm:col-start-1">
                     <label for="city" class="block text-sm font-medium leading-6 text-gray-900">Price</label>
                     <div class="mt-2">
-                    <input bind:value={pPrice} type="number" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
+                    <input bind:value={pPrice} min="0" type="number" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
                     </div>
                 </div>
 
             <div class="sm:col-span-2">
                 <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Regular Price</label>
                 <div class="mt-2">
-                <input bind:value={pRegPrice} type="number" name="region" id="region" autocomplete="address-level1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
+                <input bind:value={pRegPrice} min="0" type="number" name="region" id="region" autocomplete="address-level1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
 
             <div class="sm:col-span-2">
                 <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">Stock</label>
                 <div class="mt-2">
-                <input bind:value={pStock} type="number" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
+                <input bind:value={pStock } min="0" type="number" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             </div>

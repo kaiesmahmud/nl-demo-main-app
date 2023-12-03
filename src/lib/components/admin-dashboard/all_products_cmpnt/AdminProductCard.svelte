@@ -1,4 +1,5 @@
 <script>
+	import { fetchAfterDeleteProduct } from './../../../function/fetchAfterDeleteProduct.js';
     import Icon from '@iconify/svelte';
     import AdminUpdateProduct from './AdminUpdateProduct.svelte';
 
@@ -12,10 +13,17 @@
     const handleDelete = ()=>{
         showDelete = !showDelete
     }
-
+    
     // ---------------Update Section Functionalities------------
     let showUpdate =false 
     const handleShowUpdate = ()=> showUpdate = !showUpdate
+
+    const finalDelete = async() =>{
+        
+        await fetchAfterDeleteProduct(p_id)
+
+        showDelete = false
+    }
 </script>
 
 <div class=" relative  bg-gray-100/50 shadow rounded overflow-hidden">
@@ -64,8 +72,8 @@
     <div class=" absolute w-full h-full top-0 bg-black/80 flex flex-col items-center justify-center gap-2 text-sm text-white font-bold">
         <p >Confirm Delete?</p>
         <div class="flex items-center justify-center gap-5">
-            <button on:click={handleShowDelete} class="p-2 py-1 bg-green-500 rounded">no</button>
-            <button class="p-2 py-1 bg-red-500 rounded" >Yes</button>
+            <button on:click={handleDelete} class="p-2 py-1 bg-green-500 rounded">no</button>
+            <button on:click={finalDelete} class="p-2 py-1 bg-red-500 rounded" >Yes</button>
         </div>
     </div>
     {/if}
