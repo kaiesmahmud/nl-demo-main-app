@@ -1,4 +1,6 @@
 <script>
+	import { addToCart } from './../../../lib/function/AddToCart.js';
+    import { storeCartToLocalStorage } from "../../../../../second-app/src/lib/function/storeCartToLocalStorage";
     import { allProductsData, product_url ,myCartData} from "../../../lib/store/store";
     
     const product = $allProductsData.filter(p=> p.p_url == $product_url)[0];
@@ -12,8 +14,10 @@
             alert("Product already added to cart")
             return
         }else{
-            myCartData.update(cart=> [...cart,product])
-            console.log("Cart Updated-", $myCartData)
+            addToCart( cat_id, cat_name,p_id,p_img,p_name,p_price,p_reg_price,p_stock,p_type,p_url)
+            // storeCartToLocalStorage(product)
+            // myCartData.update(cart=> [...cart,product])
+            // console.log("Cart Updated-", $myCartData)
         }
     }
 </script>

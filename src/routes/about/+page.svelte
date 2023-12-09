@@ -1,5 +1,6 @@
 <script>
-    let data = [
+    export let data
+    let db = [
         {
             name: 'HISTORY',
             description: "Traxnyc is originally a German gemstone jeweler from Berlin that started with a webshop and its own TV and online jewelry auction and expanded in 2014 with a Dutch webshop: www.Traxnyc.nl and an online jewelry auction for Dutch and Belgian customers. Today Traxnyc is one of the largest online jewelry jewelers in Europe specializing in real gemstone jewelry. Nowadays you can also bid via the online jewelry auction of Traxnyc. This is in German, but the jewelry information is shown on the page in Dutch. Of course, the order shipping information in Dutch is just like our customer service. If you have a question about jewelry in the webshop or the online jewelry auction, our Dutch-speaking customer service will be happy to help you.",
@@ -22,7 +23,8 @@
         },
     ]
 </script>
-<div class="flex flex-col items-center justify-center gap-5">
+    {data.cart}
+<!-- <div class="flex flex-col items-center justify-center gap-5">
     {#each data as {name,description,img},i}
          <div class="flex flex-col md:flex-row p-2 ">
             <img class={`w-full md:w-1/2 rounded ${i%2 == 0 && "md:order-2"}`}  src={img} alt={name}>
@@ -40,4 +42,4 @@
     <div class="w-full  flex items-center justify-center">
         <img class="w-full md:w-[80%]" src="https://www.juwelo.nl/amg/c28813eb88055a8c4f74520a24cf06f5/746/media/banner/nl/common/newsletter/1e44f3de_2021-01-15_newsletter-nl-10.webp" alt="">
     </div>
-</div>
+</div> -->
