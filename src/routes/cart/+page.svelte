@@ -1,10 +1,15 @@
 <script>
-	import { myCartData, confirmedOrder } from './../../lib/store/store.js';
+	import { emptyCartData } from './../../lib/function/EmptyCartData.js';
+	import { onMount } from 'svelte';
     import Icon from '@iconify/svelte';
-
+	import { fetchCartData } from './../../lib/function/fetchCartData.js';
+	import { myCartData, confirmedOrder } from './../../lib/store/store.js';
+    
     import { allProductsData } from "../../lib/store/store";
     import PQuantity from '../../lib/components/P_Quantity.svelte';
-
+    onMount(()=>{
+        fetchCartData();
+    })
     console.log( $allProductsData)
     let total = 0,checkOutItemCount = 0, pendingOrderConfirm = []
 
@@ -49,6 +54,7 @@
     const handleConfirmOrder = ()=> {
         
     }
+
 </script> 
  
 <section class="bg-red-100/50 ">
@@ -58,6 +64,7 @@
              <h1>No Products Selected</h1>
         {/if}
        <div class="flex flex-col gap-3">
+        
            {#each $myCartData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
                 <!-- content here -->
                 <div class="p-2 bg-white shadow rounded">
@@ -85,14 +92,14 @@
                            </div>
    
                        </div>
-                       <div>
+                       <div class="w-[300px]">
                            <PQuantity 
                            {decreaseTotalPrice} 
                            {increaseTotalPrice } 
                            {p_price}
                            product={{p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
                            />
-                           
+                           <button on:click={()=>{emptyCartData(p_id)}} class="bg-red-500 rounded p-1 text-xs font-extrabold text-white px-3">Remove Product</button>
    
                        </div>
                    </div>
