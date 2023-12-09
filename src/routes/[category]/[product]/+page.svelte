@@ -1,6 +1,5 @@
 <script>
 	import { addToCart } from './../../../lib/function/AddToCart.js';
-    import { storeCartToLocalStorage } from "../../../../../second-app/src/lib/function/storeCartToLocalStorage";
     import { allProductsData, product_url ,myCartData} from "../../../lib/store/store";
     
     const product = $allProductsData.filter(p=> p.p_url == $product_url)[0];
