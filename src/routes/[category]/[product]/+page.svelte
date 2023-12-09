@@ -2,17 +2,12 @@
 	import { product_details } from './../../../lib/store/store.js';
 	import { fetchCartData } from './../../../lib/function/fetchCartData.js';
 	import { addToCart } from './../../../lib/function/AddToCart.js';
-    import { allProductsData, product_url ,myCartData} from "../../../lib/store/store";
+    import { myCartData} from "../../../lib/store/store";
     import { onMount } from 'svelte';
 
     onMount(()=>{
         fetchCartData()
-        // changeProductURL($product_url)
     })
-
-    // const product = $allProductsData.filter(p=> p.p_url == $product_url)[0];
-    // console.log(product)
-    // const {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock} = product;
     $: matched = $myCartData.filter(i=> i.p_id == $product_details.p_id)[0]
 
     const handleAddtoCart = ()=> {
@@ -22,14 +17,10 @@
             return
         }else{
             addToCart( $product_details.cat_id, $product_details.cat_name,$product_details.p_id,$product_details.p_img,$product_details.p_name,$product_details.p_price,$product_details.p_reg_price,$product_details.p_stock,$product_details.p_type,$product_details.p_url)
-            // storeCartToLocalStorage(product)
-            // myCartData.update(cart=> [...cart,product])
-            // console.log("Cart Updated-", $myCartData)
         }
     }
 </script>
 
-<!-- Page for product {$product_url} -->
 <section class="flex items-center justify-center my-5">
     <div class="w-full  p-2 rounded  flex flex-col md:flex-row gap-5 justify-center ">
         <div class="w-full md:w-1/2 overflow-hidden rounded">
@@ -46,7 +37,6 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga illum perspiciatis harum, mollitia quae animi, nobis sit asperiores repellat dolorum aliquid suscipit aperiam velit nam similique temporibus odit ullam magnam?</p>
             </div>
             {#if matched}
-                 <!-- content here -->
                  <button disabled class="bg-slate-500 p-5 font-bold text-white rounded ">
                     <a href="/cart">Product Already Added
                     </a>

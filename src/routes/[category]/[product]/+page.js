@@ -9,6 +9,4 @@ export const load =async ({params})=> {
     }else{
        throw redirect(300,"/")
     }
-    // console.log(params.product)
-    // console.log(params.category)
 }
