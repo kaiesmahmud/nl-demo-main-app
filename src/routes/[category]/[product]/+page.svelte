@@ -38,7 +38,8 @@
             </div>
             {#if matched}
                  <button disabled class="bg-slate-500 p-5 font-bold text-white rounded ">
-                    <a href="/cart">Product Already Added
+                    <a href="/cart">Product Already Added <br>
+                        <span class="text-xl ">View Basket</span>
                     </a>
 
                  </button>
