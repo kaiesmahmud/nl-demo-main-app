@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
     import Icon from '@iconify/svelte';
 	import { fetchCartData } from './../../lib/function/fetchCartData.js';
-	import { myCartData, confirmedOrder } from './../../lib/store/store.js';
+	import { myCartData } from './../../lib/store/store.js';
     
     import { allProductsData } from "../../lib/store/store";
     import PQuantity from '../../lib/components/P_Quantity.svelte';
@@ -53,13 +53,19 @@
     }
     // ---------Checkout Buttn ------------
     const handleConfirmOrder = ()=> {
-        location.href = "/dashboard"
+        location.href = "/checkout"
     }
 
 </script> 
  
 <section class="bg-red-100/50 ">
-    <p class="text-lg p-5 font-bold ">My Cart</p>
+    <div class="flex items-center justify-between p-3">
+        <p class="text-lg p-5 font-bold ">My Cart</p>
+        <a href="/checkout" class="bg-red-500 px-3 py-1 md:px-5 md:py-3 rounded text-white font-bold">
+            CheckOut
+            <!-- ({checkOutItemCount}) -->
+        </a>
+    </div>
     <div class="mb-10 p-2">
         {#if $myCartData.length == 0}
              <h1>No Products Selected</h1>
@@ -87,9 +93,6 @@
        
                                </div>
                                <p><span class="font-bold" >Name: </span>{p_name}</p>
-                               <!-- <p><span class="font-bold" >Category: </span>{cat_name}</p> -->
-       
-                               <!-- <p class="py-2"><span class="font-bold" >URL: </span>{cat_id}/{p_url}</p> -->
                            </div>
    
                        </div>
@@ -108,21 +111,5 @@
            {/each}
        </div>
     </div>
-    <div class="fixed bottom-0 w-full lg:w-[80%] flex justify-between  border p-5 max-w-[2000px] bg-red-100 rounded">
-       <!-- <div class="flex items-center gap-1 md:gap-3">
-           <p>My Cart</p>
-       </div> -->
-       <div class="flex items-center gap-1 md:gap-3 font-bold font-nunito text-red-500" >
-           <div class="text-xl">
-               <Icon icon="mdi:cart" />
-           </div>
-           <p>Total:</p>
-           <p>${total}</p>
-   
-       </div>
-       <button on:click={handleConfirmOrder} class="bg-red-500 px-3 py-1 md:px-5 md:py-3 rounded text-white font-bold">
-           CheckOut
-           ({checkOutItemCount})
-       </button>
-    </div>
+    
 </section>
