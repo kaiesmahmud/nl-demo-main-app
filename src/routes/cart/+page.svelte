@@ -51,8 +51,9 @@
             }
         }
     }
+    // ---------Checkout Buttn ------------
     const handleConfirmOrder = ()=> {
-        
+        location.href = "/dashboard"
     }
 
 </script> 
