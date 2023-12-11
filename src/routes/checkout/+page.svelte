@@ -1,6 +1,6 @@
 <script>
 	import { fetchCartData } from './../../lib/function/fetchCartData.js';
-	import { getTotalAmount } from './../../lib/function/totalAmount.js';
+	import { getTotalAmount, productTotalPrice } from './../../lib/function/totalAmount.js';
     import Icon from "@iconify/svelte";
     import { myCartData } from "../../lib/store/store";
     import { onMount } from 'svelte';
@@ -14,13 +14,13 @@
 
 <section class="">
     <p class="text-lg p-5 font-bold ">My Cart</p>
-    <div class="flex items-center flex-col md:flex-row md:items-start p-5 gap-5">
+    <div class="w-full flex items-center flex-col md:flex-row md:items-start p-5 gap-5">
         <div class="order-2 md:order-1 w-full lg:w-2/3">
             {#if $myCartData.length == 0}
                     <h1>No Products Selected</h1>
             {/if}
             <div class="flex flex-col gap-3 w-full lg:w-2/3">
-                {#each $myCartData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
+                {#each $myCartData as {p_id,p_name,p_quantity,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
                     <div class="p-2 bg-white shadow rounded">
                         <div class="flex flex-col md:flex-row items-center justify-between gap-2">
                             <div  class="flex flex-col md:flex-row items-center gap-2">
@@ -32,8 +32,11 @@
                                         <div>
                                             <p><span class="font-bold">ID: </span>{p_id}</p>
                                             <!-- <p><span class="font-bold">Stock: </span>{p_stock}</p> -->
-                                            <p class=" line-through opacity-50"><span class="font-bold" >Regular Price: </span>{p_reg_price}</p>
-                                            <p><span class="font-bold " >Price: </span>{p_price}</p>
+                                            <!-- <p class=" line-through opacity-50"><span class="font-bold" >Regular Price: </span>{p_reg_price}</p> -->
+                                            <p><span class="font-bold " >Price: </span>${p_price}</p>
+                                            <p><span class="font-bold " >Quantity: </span>{p_quantity}</p>
+                                            <p><span class="font-bold " >Subtotal: </span>${productTotalPrice(p_price,p_quantity)}</p>
+
                                         </div>
                                         <div>
                                         </div>
@@ -60,10 +63,5 @@
                 <button on:click={confirmorder} class="bg-green-800 text-green-100 font-bold p-3  rounded hover:bg-green-700 hover:text-black/80 transition-all ease-in">Confirm Order</button>
             </div>
        </div>
-    </div>
-    <div class="mb-10 p-2 flex gap-3 md:gap-5">
-       
-
-       
     </div>
 </section>
