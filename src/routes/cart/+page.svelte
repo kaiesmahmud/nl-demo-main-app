@@ -71,7 +71,7 @@
         {/if}
        <div class="flex flex-col gap-3">
         
-           {#each $myCartData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
+           {#each $myCartData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_quantity}}
                 <!-- content here -->
                 <div class="p-2 bg-white shadow rounded">
                    <div class="flex flex-col md:flex-row items-center justify-between gap-2">
@@ -97,10 +97,7 @@
                        </div>
                        <div class="w-[300px]">
                            <PQuantity 
-                           {decreaseTotalPrice} 
-                           {increaseTotalPrice } 
-                           {p_price}
-                           product={{p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
+                           product={{p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_quantity}}
                            />
                            <button on:click={()=>{emptyCartData(p_id)}} class="bg-red-500 rounded p-1 text-xs font-extrabold text-white px-3">Remove Product</button>
    
