@@ -1,7 +1,6 @@
 <script>
 	import { emptyCartData } from './../../lib/function/EmptyCartData.js';
 	import { onMount } from 'svelte';
-    import Icon from '@iconify/svelte';
 	import { fetchCartData } from './../../lib/function/fetchCartData.js';
 	import { myCartData } from './../../lib/store/store.js';
     
