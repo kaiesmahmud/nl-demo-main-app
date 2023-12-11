@@ -1,14 +1,16 @@
 <script>
+	import { count_product } from './../function/count_product.js';
     import Icon from '@iconify/svelte';
-    export let p_price;
-    export let increaseTotalPrice;
-    export let decreaseTotalPrice;
+    // export let p_price;
+    // export let increaseTotalPrice;
+    // export let decreaseTotalPrice;
     export let product;
-    console.log("product is  ", product)
-    let qty = 1;
+    // console.log("product is  ", product)
+    let qty = parseInt(product.p_quantity);
     const increaseQty = ()=>{
         qty++
-        increaseTotalPrice(parseInt(p_price),product)
+        // increaseTotalPrice(parseInt(p_price),product)
+        count_product(product.p_id,qty )
     }
     const decreaseQty = ()=>{
         if(qty < 1){
@@ -16,15 +18,18 @@
         }else if(qty == 1){
             alert("Quantity cannot be less than 1")
             qty = 1
+            count_product(product.p_id,qty )
             // decreaseTotalPrice(parseInt(p_price),qty)
         }else{
-            decreaseTotalPrice(parseInt(p_price),product)
+            // decreaseTotalPrice(parseInt(p_price),product)
             qty--
+            count_product(product.p_id,qty )
+
         }
     }
 </script>
 <div class="flex  items-center gap-2 justify-between w-full ">
-    <p class="font-bold ">Quantity : {qty} </p>
+    <p class="font-bold ">Quantity : {product.p_quantity} </p>
     <div class="flex gap-3 text-white py-3 font-bold">
         <button on:click={decreaseQty} class="px-3 py-1 md:px-5 bg-red-500 rounded flex items-center gap-2">
             <Icon icon="ic:baseline-minus" />
