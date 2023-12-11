@@ -13,6 +13,20 @@
 
     const handleUpdateProductData = async(e)=>{
         e.preventDefault()
+        switch (pCatId) {
+                case "/men-collection":
+                    pCat = "men-collection"
+                    break;
+                case "/women-collection":
+                    pCat = "women-collection"
+                    break;
+                case "/custom":
+                    pCat = "custom"
+                    break;
+                case "/special-offer":
+                    pCat = "special-offer"
+                    break;
+            }
         let obj = {
             p_id:p_id,
             p_name:pName,
@@ -52,8 +66,8 @@
                             <select bind:value={pCatId} id="cat_id" name="cat_id" autocomplete="cat_id" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6" required>
                                 <option selected={cat_id == "/women-collection"}>/women-collection</option>
                                 <option selected={cat_id == "/men-collection"}>/men-collection</option>
-                                <!-- <option selected={cat_id == "/custom"}>/custom</option>
-                                <option selected={cat_id == "/special-offer"}>/special-offer</option> -->
+                                <option selected={cat_id == "/custom"}>/custom</option>
+                                <option selected={cat_id == "/special-offer"}>/special-offer</option>
                             </select>
                         </div>
                     </div>
