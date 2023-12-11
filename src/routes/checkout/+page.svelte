@@ -1,9 +1,13 @@
 <script>
+	import { fetchCartData } from './../../lib/function/fetchCartData.js';
 	import { getTotalAmount } from './../../lib/function/totalAmount.js';
     import Icon from "@iconify/svelte";
     import { myCartData } from "../../lib/store/store";
+    import { onMount } from 'svelte';
 
-
+    onMount(()=>{
+        fetchCartData();
+    })
 </script>
 
 <section class="">
